@@ -1,0 +1,27 @@
+.navigationBar {
+    display: flex;
+    color: #cbcbcb;
+    background-color: #232323;
+    width: 100vw;
+    font-family: Arial;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerLink{
+    margin-right: 1vw;
+    align-items: center;
+    border: 1px solid #f35f5f;
+    background: #f35f5f;
+    color: white;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 5px;
+}
