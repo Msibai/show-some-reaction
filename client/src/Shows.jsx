@@ -1,5 +1,6 @@
 import React from 'react';
 import ShowAPI from "./ShowAPI.jsx";
+import ShowCard from "./ShowCard.jsx";
 
 function Shows() {
     const [showData, setShowData]= React.useState(ShowAPI);
