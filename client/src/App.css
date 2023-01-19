@@ -1,3 +1,4 @@
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -52,5 +53,127 @@
     width: 40%;
     border-radius: 50%;
     min-hight: 20rem;
+}
+
+.navigationBar {
+    display: flex;
+    color: #eee0e0;
+    background-color: #232323;
+    box-shadow: 0px 0px 90px 2px #4b4444 inset;;
+    width: 100%;
+    height: 20vh;
+    font-family: "Bernard MT Condensed";
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.navLink{
+    margin: 1vw;
+    align-items: center;
+    text-align: center;
+    font-family: "Avenir";
+    letter-spacing: 1px;
+    border: 1px solid #f35f5f;
+    background: #f35f5f;
+    color: white;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navLink:hover {
+    background-color: rgba(239, 94, 94, 0.56);
+    color: white;
+    transition: background-color 1s, border 0.5s;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.navLink:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.logo {
+    width: 10%;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+@media (max-width: 700px) {
+    .navLinks {
+        flex-direction: column;
+    }
+
+    .pageTitle {
+        font-size: 7vw;
+    }
+
+    .navLink{
+        font-family: "Arial";
+        color: white;
+        padding: 1px;
+        font-size: smaller;
+    }
+
+    .logo {
+        width: 17%;
+    }
+
+}
+
+.main-card-container{
+    height: 5vh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+.card-container{
+    width: 23%;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+.card-body {
+    display:flex;
+    flex-direction: column;
+}
+
+.card-image{
+
+    border-radius: 2%;
+    box-shadow: 10px 5px 5px grey;
+
+}
+.buy-tickets{
+    background-color: #a17575;
+    color: #1a1a1a;
+    width: 105px;
+    font-size: 13px;
+    border: 2px solid #242424;
+    transition-duration: 0.5s;
+    box-shadow: 2px 2px 15px #855252;
+}
+.buy-tickets:active{
+    transform: translateY(2px);
+
+}
+
+.show-date{
+    font-weight: bold;
+}
+
+.card{
+    border: 3px solid #332525;
+    border-radius: 5%;
+    padding: 15px;
+
 }
 
