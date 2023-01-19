@@ -1,0 +1,49 @@
+
+.main-card-container{
+    height: 5vh;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+.card-container{
+    width: 23%;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+.card-body {
+    display:flex;
+    flex-direction: column;
+}
+
+.card-image{
+
+    border-radius: 2%;
+    box-shadow: 10px 5px 5px grey;
+
+}
+.buy-tickets{
+    background-color: #a17575;
+    color: #1a1a1a;
+    width: 105px;
+    font-size: 13px;
+    border: 2px solid #242424;
+    transition-duration: 0.5s;
+    box-shadow: 2px 2px 15px #855252;
+}
+.buy-tickets:active{
+    transform: translateY(2px);
+
+}
+
+.show-date{
+    font-weight: bold;
+}
+
+.card{
+    border: 3px solid #332525;
+    border-radius: 5%;
+    padding: 15px;
+
+}
