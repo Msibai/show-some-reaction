@@ -6,6 +6,7 @@ import ShowAPI from "./ShowAPI.jsx";
 import ShowCard from "./ShowCard.jsx";
 import {useState} from "react";
 import SearchByName from "./SearchByName.jsx";
+import SearchByPrice from "./SearchByPrice.jsx";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
             <Navbar/>
             <SearchByName showData={showData} setFilteredData={setFilteredData}/>
+            <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
             {filteredData ?
                 (
                     <ShowCard showData={filteredData} />

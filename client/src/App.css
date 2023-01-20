@@ -163,6 +163,7 @@ footer {
 
 .searchByName {
     padding: 1px;
+    margin: 20px;
     border-radius: 10px;
     background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
     overflow: hidden;
@@ -176,7 +177,7 @@ footer {
     border-radius: 10px;
 }
 
-label {
+label, .budget {
     display: block;
     color: #3c4b66;
     margin-bottom: 12px;
@@ -254,6 +255,42 @@ input:focus {
     color: #6d7f8f;
     background-color: #eff5fa;
 }
+
+/********** SearchByName **********/
+
+.searchByPrice {
+    padding: 1px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
+    overflow: hidden;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7;
+    width: 380px;
+}
+
+.searchByPrice .container {
+    padding: 16px 16px;
+    background-color: #e2e9f4;
+    border-radius: 10px;
+}
+
+.output {
+    text-align: center;
+    line-height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    border-radius: 10px;
+    margin-right: 12px;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7;
+}
+
+.searchByPrice input {
+    width: 65%;
+
+}
+
+
+
 
 
 @media (max-width: 700px) {
