@@ -12,12 +12,12 @@ export default function SearchByDate(props) {
     }
 
     const getAllShow = () => {
-        props.stFilteredData(null);
+        props.setFilteredData(null);
     }
 
     const getTodaysShow = () => {
         const today = new Date().toDateString();
-        props.stFilteredData(
+        props.setFilteredData(
             showList.filter(show => {
                 if (new Date(show.date).toDateString() === today) {
                     return show
@@ -31,7 +31,7 @@ export default function SearchByDate(props) {
         const to = new Date(toRef.current.value).valueOf();
 
         if (from && to) {
-            props.stFilteredData(
+            props.setFilteredData(
                 showList.filter(show => {
                     if (new Date(show.date).valueOf() >= from && new Date(show.date).valueOf() <= to) {
                         return show
@@ -44,7 +44,7 @@ export default function SearchByDate(props) {
     function handleReset(){
         fromRef.current.value = null;
         toRef.current.value = null;
-        props.stFilteredData(null);
+        props.setFilteredData(null);
     }
 
     return (

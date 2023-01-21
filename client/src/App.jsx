@@ -9,7 +9,8 @@ import SearchByName from "./SearchByName.jsx";
 import SearchByPrice from "./SearchByPrice.jsx";
 import { Routes, Route } from "react-router-dom";
 import EventPage from "./EventPage.jsx";
-import SortByDate from "./SearchByDate.jsx";
+import AddressBox from "./AddressBox.jsx";
+import SearchByDate from "./SearchByDate.jsx";
 
 function App() {
 
@@ -21,25 +22,17 @@ function App() {
 
             <Navbar/>
             <SearchByName showData={showData} setFilteredData={setFilteredData}/>
-            <SortByDate showData={showData} setShowData={setShowData} stFilteredData={setFilteredData} />
             <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
-            {filteredData ?
-                (
-                    <ShowCard showData={filteredData} />
-                ) :
-                (
-                    <ShowCard showData={showData} />
-
-                )
-            }
-            {/*<Routes>*/}
-            {/*    <Route path="/" element={<ShowCard showData={showData} />} />*/}
-            {/*    <Route path="EventPage" element={<EventPage />} />*/}
-            {/*</Routes>*/}
-            {/*<Routes>*/}
-            {/*    <Route path="/" element={<ShowCard showData={showData} />} />*/}
-            {/*    <Route path="EventPage" element={<EventPage />} />*/}
-            {/*</Routes>*/}
+            <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
+            <Routes>
+                {filteredData ?
+                    (<Route path="/" element={<ShowCard showData={filteredData} />} />)
+                    :
+                    (<Route path="/" element={<ShowCard showData={showData} />} />)
+                }
+                <Route path="EventPage" element={<EventPage />} />
+                <Route path="AddressBox" element={<AddressBox />} />
+            </Routes>
 
             <Footer/>
 
