@@ -323,3 +323,39 @@ input:focus {
 /*    min-hight: 20rem;*/
 /*}*/
 
+.event-category{
+    color: darkred;
+}
+
+.information-section{
+    background-color:#d3d3dc ;
+    padding: 20px;
+    width: 80%;
+    display: inline-block;
+    margin-left: 10%;
+    text-align: justify;
+}
+
+.artist-details{
+    width: 15%;
+    float:left;
+    margin-right: 15px;
+
+}
+
+.artist-pic{
+    width: 150px;
+    border-radius: 50%;
+    display: inline;
+
+}
+.artist-name{
+    float: right;
+    margin-right: 110px;
+
+}
+
+.artist-info-section{
+    width: 80%;
+    display: inline-block;
+}

@@ -32,11 +32,10 @@ function App() {
             {/*}*/}
             <Routes>
                 <Route path="/" element={<ShowCard showData={showData} />} />
-                <Route path="EventPage" element={<EventPage />} />
             </Routes>
             <Routes>
-                <Route path="/" element={<ShowCard showData={showData} />} />
-                <Route path="EventPage" element={<EventPage />} />
+
+                <Route path="EventPage" element={<EventPage filteredData={filteredData} />} />
             </Routes>
 
             <Footer/>

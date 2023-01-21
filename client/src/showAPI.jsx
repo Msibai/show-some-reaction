@@ -4,11 +4,13 @@ const ShowAPI = [
 
         id: 1,
 
-        image: "src/images/fifth.jpg",
+        image: "src/images/first.jpg",
 
-        name: "ashish",
+        artist: "src/images/kanan.jpg",
 
-        category: "comedy",
+        name: "Ashish",
+
+        category: "Comedy",
 
         price: "200",
 
@@ -16,9 +18,10 @@ const ShowAPI = [
 
         location: 'Mejeriet, Lund',
 
-        description:
+        description: 'I love this show realy ctetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat inI love this show realy oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in',
 
-            "I love this show realy oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. ",
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer.",
 
     },
 
@@ -30,9 +33,11 @@ const ShowAPI = [
 
         image: "src/images/second.jpg",
 
-        name: "aakash",
+        artist: "src/images/gaurav.jpg",
 
-        category: "comedy",
+        name: "Aakash",
+
+        category: "Comedy",
 
         price: "200",
 
@@ -42,7 +47,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum dolor s. lor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -52,9 +60,11 @@ const ShowAPI = [
 
         image: "src/images/third.jpg",
 
-        name: "kanan",
+        artist: "src/images/ashish.jpg",
 
-        category: "drama",
+        name: "Kanan",
+
+        category: "Drama",
 
         price: "400",
 
@@ -64,7 +74,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum dolor sit amet I love this show realyipsam autem eius necessitatibus fugiat inconsectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -74,9 +87,11 @@ const ShowAPI = [
 
         image: "src/images/fourth.jpg",
 
-        name: "jaspreet",
+        artist: "src/images/ashish.jpg",
 
-        category: "thriller",
+        name: "Jaspreet",
+
+        category: "Thriller",
 
         price: "500",
 
@@ -86,7 +101,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum I love this show realy oo yues  Lorem ipsum dolor sit amet consectetur olor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat indolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -96,9 +114,11 @@ const ShowAPI = [
 
         image: "src/images/fifth.jpg",
 
-        name: "harsh",
+        artist: "src/images/ashish.jpg",
 
-        category: "drama",
+        name: "Harsh",
+
+        category: "Drama",
 
         price: "200",
 
@@ -108,7 +128,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum I love this show realy oo yues how realy oo yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -118,9 +141,11 @@ const ShowAPI = [
 
         image: "src/images/sixth.jpg",
 
-        name: "javed",
+        artist: "src/images/ashish.jpg",
 
-        category: "comedy",
+        name: "Javed",
+
+        category: "Comedy",
 
         price: "240",
 
@@ -130,7 +155,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum I love this show es  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat indolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -140,9 +168,11 @@ const ShowAPI = [
 
         image: "src/images/seventh.jpg",
 
-        name: "rahul",
+        artist: "src/images/ashish.jpg",
 
-        category: "thriller",
+        name: "Rahul",
+
+        category: "Thriller",
 
         price: "150",
 
@@ -152,7 +182,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum I love this show yues  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
@@ -162,9 +195,11 @@ const ShowAPI = [
 
         image: "src/images/eighth.jpg",
 
-        name: "gaurav",
+        artist: "src/images/ashish.jpg",
 
-        category: "drama",
+        name: "Gaurav",
+
+        category: "Drama",
 
         price: "410",
 
@@ -174,7 +209,10 @@ const ShowAPI = [
 
         description:
 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+            "Lorem ipsum I love this es  Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat indolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
+        about: "Best remembered as one-half of the comedian from Pretentious Movie Reviews, Kanan Gill is an Indian stand-up comedian and actor. After having performed at various stand-up shows, Kanan made his acting debut in 2017 with the comedy drama Noor, which also stars Sonakshi Sinha, Shibani Dandekar, and Purab Kohli in pivotal roles. " ,
+        life: "Born to Colonel CS Gill and his wife, Kanan hails from Bengaluru, where he grew up with his sister Natasha Gill. Kanan studied at the Ahlcon Public School in New Delhi, after which he was moved to The Frank Anthony Public School, Bangalore. He then pursued a B.E. in Computer Science at M S Ramaiah Institute of Technology, Bengaluru, which is affiliated to the Visvesvaraya Technological University. Upon graduating, he started working with the Exter Group in 2011 as a software engineer." ,
+
 
     },
 
