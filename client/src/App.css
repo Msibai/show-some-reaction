@@ -322,4 +322,41 @@ input:focus {
 /*    border-radius: 50%;*/
 /*    min-hight: 20rem;*/
 /*}*/
+.location-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    justify-content: end;
+    /*border: 3px solid rgba(10, 10, 10, 0.25);*/
+    margin-right: 5rem;
+    text-align: start;
+    /*border-radius: 5px;*/
+   /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.13);*/
+}
 
+.location-headline {
+    margin-top: 4rem;
+    align-content: end;
+}
+
+.show-address {
+    max-width: 10rem;
+}
+
+.directions-link {
+    color: darkred;
+    text-align: center;
+    text-decoration: none;
+}
+
+.directions-link:hover {
+    color: #f35f5f;
+}
+
+.map-iframe {
+    height: 50vh;
+    width: 15vw;
+}
+
+.boldWord {
+    font-weight: bold;
+}
