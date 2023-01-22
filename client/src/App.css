@@ -177,7 +177,7 @@ footer {
     border-radius: 10px;
 }
 
-label, .budget {
+label, .budget, .date {
     display: block;
     color: #3c4b66;
     margin-bottom: 12px;
@@ -256,7 +256,7 @@ input:focus {
     background-color: #eff5fa;
 }
 
-/********** SearchByName **********/
+/********** SearchByPrice **********/
 
 .searchByPrice {
     padding: 1px;
@@ -289,9 +289,36 @@ input:focus {
 
 }
 
+/********** SearchByDate **********/
 
+.SearchByDate {
+    padding: 1px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
+    overflow: hidden;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7;
+    width: 380px;
+}
 
+.SearchByDate .container {
+    padding: 16px 16px;
+    background-color: #e2e9f4;
+    border-radius: 10px;
+}
 
+.SearchByDate button {
+    width: 120px;
+    margin: 15px 5px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.datePicker{
+    border: 1px solid #4fa2c7;
+    padding: 10px;
+    margin: 10px 0;
+}
 
 @media (max-width: 700px) {
     .navLinks {
@@ -322,6 +349,26 @@ input:focus {
 /*    border-radius: 50%;*/
 /*    min-hight: 20rem;*/
 /*}*/
+.location-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    justify-content: end;
+    /*border: 3px solid rgba(10, 10, 10, 0.25);*/
+    margin-right: 5rem;
+    text-align: start;
+    /*border-radius: 5px;*/
+   /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.13);*/
+}
+
+.location-headline {
+    margin-top: 4rem;
+    align-content: end;
+}
+
+.show-address {
+    max-width: 10rem;
+}
+
 
 .event-category{
     color: darkred;
@@ -359,3 +406,23 @@ input:focus {
     width: 80%;
     display: inline-block;
 }
+
+.directions-link {
+    color: darkred;
+    text-align: center;
+    text-decoration: none;
+}
+
+.directions-link:hover {
+    color: #f35f5f;
+}
+
+.map-iframe {
+    height: 50vh;
+    width: 15vw;
+}
+
+.boldWord {
+    font-weight: bold;
+}
+
