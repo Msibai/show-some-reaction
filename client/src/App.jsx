@@ -25,6 +25,13 @@ function App() {
             <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
             <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
             <Routes>
+
+                <Route path="/" element={<ShowCard showData={showData} />} />
+            </Routes>
+            <Routes>
+
+                <Route path="EventPage" element={<EventPage filteredData={filteredData} />} />
+=======
                 {filteredData ?
                     (<Route path="/" element={<ShowCard showData={filteredData} />} />)
                     :

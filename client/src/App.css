@@ -320,12 +320,6 @@ input:focus {
     margin: 10px 0;
 }
 
-
-
-
-
-
-
 @media (max-width: 700px) {
     .navLinks {
         flex-direction: column;
@@ -375,6 +369,44 @@ input:focus {
     max-width: 10rem;
 }
 
+
+.event-category{
+    color: darkred;
+}
+
+.information-section{
+    background-color:#d3d3dc ;
+    padding: 20px;
+    width: 80%;
+    display: inline-block;
+    margin-left: 10%;
+    text-align: justify;
+}
+
+.artist-details{
+    width: 15%;
+    float:left;
+    margin-right: 15px;
+
+}
+
+.artist-pic{
+    width: 150px;
+    border-radius: 50%;
+    display: inline;
+
+}
+.artist-name{
+    float: right;
+    margin-right: 110px;
+
+}
+
+.artist-info-section{
+    width: 80%;
+    display: inline-block;
+}
+
 .directions-link {
     color: darkred;
     text-align: center;
@@ -393,3 +425,4 @@ input:focus {
 .boldWord {
     font-weight: bold;
 }
+
