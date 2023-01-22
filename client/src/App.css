@@ -177,7 +177,7 @@ footer {
     border-radius: 10px;
 }
 
-label, .budget {
+label, .budget, .date {
     display: block;
     color: #3c4b66;
     margin-bottom: 12px;
@@ -256,7 +256,7 @@ input:focus {
     background-color: #eff5fa;
 }
 
-/********** SearchByName **********/
+/********** SearchByPrice **********/
 
 .searchByPrice {
     padding: 1px;
@@ -289,9 +289,36 @@ input:focus {
 
 }
 
+/********** SearchByDate **********/
 
+.SearchByDate {
+    padding: 1px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
+    overflow: hidden;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7;
+    width: 380px;
+}
 
+.SearchByDate .container {
+    padding: 16px 16px;
+    background-color: #e2e9f4;
+    border-radius: 10px;
+}
 
+.SearchByDate button {
+    width: 120px;
+    margin: 15px 5px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.datePicker{
+    border: 1px solid #4fa2c7;
+    padding: 10px;
+    margin: 10px 0;
+}
 
 @media (max-width: 700px) {
     .navLinks {
@@ -334,6 +361,19 @@ input:focus {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.location-headline {
+    margin-top: 4rem;
+    align-content: end;
+}
+
+.show-address {
+    max-width: 10rem;
+}
+
+
+>>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
 .event-category{
     color: darkred;
 }
@@ -370,6 +410,7 @@ input:focus {
     width: 80%;
     display: inline-block;
 }
+<<<<<<< HEAD
 =======
 .location-headline {
     margin-top: 4rem;
@@ -379,6 +420,8 @@ input:focus {
 .show-address {
     max-width: 10rem;
 }
+=======
+>>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
 
 .directions-link {
     color: darkred;
@@ -398,4 +441,8 @@ input:focus {
 .boldWord {
     font-weight: bold;
 }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
