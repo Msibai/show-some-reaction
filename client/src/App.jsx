@@ -9,6 +9,7 @@ import SearchByName from "./SearchByName.jsx";
 import SearchByPrice from "./SearchByPrice.jsx";
 import { Routes, Route } from "react-router-dom";
 import EventPage from "./EventPage.jsx";
+import AddressBox from "./AddressBox.jsx";
 
 function App() {
 
@@ -19,8 +20,8 @@ function App() {
         <>
 
             <Navbar/>
-            {/*<SearchByName showData={showData} setFilteredData={setFilteredData}/>*/}
-            {/*<SearchByPrice showData={showData} setFilteredData={setFilteredData}/>*/}
+            {<SearchByName showData={showData} setFilteredData={setFilteredData}/>}
+            {<SearchByPrice showData={showData} setFilteredData={setFilteredData}/>}
             {/*{filteredData ?*/}
             {/*    (*/}
             {/*        <ShowCard showData={filteredData} />*/}
@@ -32,10 +33,20 @@ function App() {
             {/*}*/}
             <Routes>
                 <Route path="/" element={<ShowCard showData={showData} />} />
+<<<<<<< HEAD
             </Routes>
             <Routes>
 
                 <Route path="EventPage" element={<EventPage filteredData={filteredData} />} />
+=======
+                <Route path="EventPage" element={<EventPage />} />
+
+            </Routes>
+            <Routes>
+                <Route path="/" element={<ShowCard showData={showData} />} />
+                <Route path="EventPage" element={<EventPage />} />
+                <Route path="AddressBox" element={<AddressBox />} />
+>>>>>>> main
             </Routes>
 
             <Footer/>
