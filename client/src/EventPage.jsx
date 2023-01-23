@@ -1,6 +1,7 @@
 import {useLocation} from "react-router-dom";
 import ShowAPI from "./showAPI.jsx";
 import {useState} from "react";
+import AddressBox from "./AddressBox.jsx";
 
 export default function EventPage () {
     const location = useLocation();
@@ -10,7 +11,7 @@ export default function EventPage () {
     return (
        <>
            <h1 className= "event-category"> {location.state.category} Event </h1>
-
+<AddressBox/>
            <div className="information-section">
                <div className="event-information-section">
                <h2 className="heading-general-info"> General Information about the event </h2>

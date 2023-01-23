@@ -20,15 +20,19 @@ function App() {
     return (
         <>
             <Navbar/>
-            <SearchByName showData={showData} setFilteredData={setFilteredData}/>
-            <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
-            <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
+
+
+
             <Routes>
-                {filteredData ?
-                    (<Route path="/" element={<ShowCard showData={filteredData} />} />)
+                <Route path="/" element={<> <SearchByName showData={showData} setFilteredData={setFilteredData}/>
+                    <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
+                    <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
+                    {filteredData ?
+                    (<ShowCard showData={filteredData} />)
                     :
-                    (<Route path="/" element={<ShowCard showData={showData} />} />)
-                }
+                    (<ShowCard showData={showData} />)
+                }</>}/>
+
                 <Route path="EventPage" element={<EventPage />} />
                 <Route path="AddressBox" element={<AddressBox />} />
             </Routes>
