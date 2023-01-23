@@ -14,7 +14,7 @@ const ShowAPI = [
 
         price: "200",
 
-        date: '2023-01-23',
+        date: '2023-02-23',
 
         location: 'Mejeriet, Lund',
 
@@ -68,7 +68,7 @@ const ShowAPI = [
 
         price: "400",
 
-        date: '2023-01-20',
+        date: '2023-02-20',
 
         location: 'Malmö Arena',
 
@@ -206,6 +206,7 @@ const ShowAPI = [
         date: '2023-02-22',
 
         location: 'Malmö Arena',
+
 
         description:
 
