@@ -9,17 +9,18 @@ export default function EventPage () {
     const [isLess, setIsLess] = useState(false);
 
     return (
-       <>
-
-           <h1 className= "event-category"> {location.state.category} Event </h1>
-
+       <div className="full-event-container">
+           <div className="trailer-component">
            <div className="trailer">
-               <h2>Trailer</h2>
-               <img src= {location.state.trailer}/>
-               <button>Buy tickets</button>
-               <button>Share event</button>
+               <img src= {location.state.trailer} className="trailer-photo"/>
            </div>
 
+           <div className="trailer-buttons">
+               <button className="buy-button">Buy tickets</button>
+               <button className="share-button">Share event</button>
+           </div>
+
+           </div>
 
 <AddressBox/>
 
@@ -28,7 +29,7 @@ export default function EventPage () {
                <h2 className="heading-general-info"> General Information about the event </h2>
                <p className="event-description"> {location.state.description} </p>
                </div>
-               <button type="button" onClick={ ()=> setIsLess(!isLess)}> {isLess === false ? 'More about Artist' : 'Hide'}</button>
+               <button className="hide-show-button" type="button" onClick={ ()=> setIsLess(!isLess)}> {isLess === false ? 'More about Artist' : 'Hide'}</button>
                { isLess &&
                <div className="artist-information-section">
                <div className="artist-details">
@@ -50,6 +51,6 @@ export default function EventPage () {
 
            </div>
 
-       </>
+       </div>
     )
 }
