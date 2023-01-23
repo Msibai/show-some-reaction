@@ -115,13 +115,16 @@ footer {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 2vw;
+    margin-bottom: 4vh;
 }
 .card-container{
     width: 23%;
     padding: 10px;
     display:flex;
     flex-direction: column;
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
+   /* border-radius: 2%;*/
 }
 .card-body {
     display:flex;
@@ -130,18 +133,15 @@ footer {
 
 .card-image{
 
-    border-radius: 2%;
-    box-shadow: 10px 5px 5px grey;
-
 }
 .buy-tickets{
-    background-color: #a17575;
+    background-color: #f35f5f;
     color: #1a1a1a;
     width: 105px;
     font-size: 13px;
-    border: 2px solid #242424;
+   /* border: 2px solid #242424; */
     transition-duration: 0.5s;
-    box-shadow: 2px 2px 15px #855252;
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 .buy-tickets:active{
     transform: translateY(2px);
@@ -149,11 +149,14 @@ footer {
 }
 
 .show-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
 }
 
 .card{
-    border: 3px solid #332525;
+    /*border: 3px solid #332525; */
     border-radius: 5%;
     padding: 15px;
 
@@ -315,7 +318,7 @@ input:focus {
 }
 
 .datePicker{
-    border: 1px solid #4fa2c7;
+   /* border: 1px solid #4fa2c7; */
     padding: 10px;
     margin: 10px 0;
 }
