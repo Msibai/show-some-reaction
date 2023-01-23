@@ -1,6 +1,7 @@
 import {useLocation} from "react-router-dom";
 import ShowAPI from "./showAPI.jsx";
 import {useState} from "react";
+import AddressBox from "./AddressBox.jsx";
 
 export default function EventPage () {
     const location = useLocation();
@@ -18,6 +19,9 @@ export default function EventPage () {
                <button>Buy tickets</button>
                <button>Share event</button>
            </div>
+
+
+<AddressBox/>
 
            <div className="information-section">
                <div className="event-information-section">
