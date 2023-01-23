@@ -339,7 +339,6 @@ input:focus {
     .logo {
         width: 17%;
     }
-
 }
 
 
@@ -360,9 +359,7 @@ input:focus {
    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.13);*/
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 .location-headline {
     margin-top: 4rem;
     align-content: end;
@@ -373,7 +370,6 @@ input:focus {
 }
 
 
->>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
 .event-category{
     color: darkred;
 }
@@ -391,7 +387,6 @@ input:focus {
     width: 15%;
     float:left;
     margin-right: 15px;
-
 }
 
 .artist-pic{
@@ -403,15 +398,13 @@ input:focus {
 .artist-name{
     float: right;
     margin-right: 110px;
-
 }
 
 .artist-info-section{
     width: 80%;
     display: inline-block;
 }
-<<<<<<< HEAD
-=======
+
 .location-headline {
     margin-top: 4rem;
     align-content: end;
@@ -420,8 +413,6 @@ input:focus {
 .show-address {
     max-width: 10rem;
 }
-=======
->>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
 
 .directions-link {
     color: darkred;
@@ -441,8 +432,4 @@ input:focus {
 .boldWord {
     font-weight: bold;
 }
-<<<<<<< HEAD
->>>>>>> main
-=======
 
->>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
