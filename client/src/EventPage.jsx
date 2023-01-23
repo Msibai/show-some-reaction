@@ -10,8 +10,19 @@ export default function EventPage () {
 
     return (
        <>
+
            <h1 className= "event-category"> {location.state.category} Event </h1>
+
+           <div className="trailer">
+               <h2>Trailer</h2>
+               <img src= {location.state.trailer}/>
+               <button>Buy tickets</button>
+               <button>Share event</button>
+           </div>
+
+
 <AddressBox/>
+
            <div className="information-section">
                <div className="event-information-section">
                <h2 className="heading-general-info"> General Information about the event </h2>
@@ -32,7 +43,9 @@ export default function EventPage () {
                    <h2> Life: </h2>
                    <p> {location.state.life}</p>
                </div>
+
                </div>  }
+
 
 
            </div>
