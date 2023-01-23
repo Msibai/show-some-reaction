@@ -8,6 +8,8 @@ const ShowAPI = [
 
         artist: "src/images/kanan.jpg",
 
+        trailer: "src/images/first.jpg",
+
         name: "Ashish",
 
         category: "Comedy",
@@ -34,6 +36,8 @@ const ShowAPI = [
         image: "src/images/second.jpg",
 
         artist: "src/images/gaurav.jpg",
+
+        trailer: "src/images/aakashfull.jpg",
 
         name: "Aakash",
 
@@ -62,6 +66,8 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
+        trailer: "src/images/kananfull.jpg",
+
         name: "Kanan",
 
         category: "Drama",
@@ -88,6 +94,8 @@ const ShowAPI = [
         image: "src/images/fourth.jpg",
 
         artist: "src/images/ashish.jpg",
+
+        trailer: "src/images/fourth.jpg",
 
         name: "Jaspreet",
 
@@ -116,6 +124,8 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
+        trailer: "src/images/fifth.jpg",
+
         name: "Harsh",
 
         category: "Drama",
@@ -142,6 +152,8 @@ const ShowAPI = [
         image: "src/images/sixth.jpg",
 
         artist: "src/images/ashish.jpg",
+
+        trailer: "src/images/sixth.jpg",
 
         name: "Javed",
 
@@ -170,6 +182,9 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
+        trailer: "src/images/rahulfull.jpg",
+
+
         name: "Rahul",
 
         category: "Thriller",
@@ -196,6 +211,8 @@ const ShowAPI = [
         image: "src/images/eighth.jpg",
 
         artist: "src/images/ashish.jpg",
+
+        trailer: "src/images/gauravfull.jpg",
 
         name: "Gaurav",
 
