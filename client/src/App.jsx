@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import EventPage from "./EventPage.jsx";
 import AddressBox from "./AddressBox.jsx";
 import SearchByDate from "./SearchByDate.jsx";
+import Filter from "./Filter.jsx";
 
 function App() {
 
@@ -24,9 +25,8 @@ function App() {
 
 
             <Routes>
-                <Route path="/" element={<> <SearchByName showData={showData} setFilteredData={setFilteredData}/>
-                    <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
-                    <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
+                <Route path="/" element={<> <Filter showData={showData} setShowData={setShowData}
+                                                    setFilteredData={setFilteredData}/>
                     {filteredData ?
                     (<ShowCard showData={filteredData} />)
                     :
