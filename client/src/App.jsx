@@ -19,35 +19,11 @@ function App() {
 
     return (
         <>
-
             <Navbar/>
             <SearchByName showData={showData} setFilteredData={setFilteredData}/>
             <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
             <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/>
             <Routes>
-<<<<<<< HEAD
-                <Route path="/" element={<ShowCard showData={showData} />} />
-<<<<<<< HEAD
-            </Routes>
-            <Routes>
-
-                <Route path="EventPage" element={<EventPage filteredData={filteredData} />} />
-=======
-                <Route path="EventPage" element={<EventPage />} />
-=======
->>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
-
-                <Route path="/" element={<ShowCard showData={showData} />} />
-<<<<<<< HEAD
-                <Route path="EventPage" element={<EventPage />} />
-                <Route path="AddressBox" element={<AddressBox />} />
->>>>>>> main
-=======
-            </Routes>
-            <Routes>
-
-                <Route path="EventPage" element={<EventPage filteredData={filteredData} />} />
-=======
                 {filteredData ?
                     (<Route path="/" element={<ShowCard showData={filteredData} />} />)
                     :
@@ -55,7 +31,6 @@ function App() {
                 }
                 <Route path="EventPage" element={<EventPage />} />
                 <Route path="AddressBox" element={<AddressBox />} />
->>>>>>> a800ad34cb944f873a04d6b3c15d1423abdc4d56
             </Routes>
 
             <Footer/>

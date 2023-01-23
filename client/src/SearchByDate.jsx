@@ -57,11 +57,11 @@ export default function SearchByDate(props) {
                     <button onClick={getAllShow}>All Show</button>
                 </div>
                 <div className="datePicker">
-                    <label for="from">From</label>
+                    <label htmlFor="from">From</label>
                     <div className="inputContainer">
                         <input ref={fromRef} id="from" type="date" max='9999-12-31'/>
                     </div>
-                    <label for="to">To</label>
+                    <label htmlFor="to">To</label>
                     <div className="inputContainer">
                         <input ref={toRef} id="to" type="date" max='9999-12-31'/>
                     </div>

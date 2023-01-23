@@ -9,12 +9,10 @@ function ShowCard({showData}) {
         navigate("/EventPage" , {state: { id: data.id , description: data.description, artist: data.artist , name: data.name , about: data.about  , life: data.life , category: data.category }})
     }
     return (
-        <>
             <section className="main-card-container">
                 {
                     showData.map( (curElem) => {
                         return (
-                            <>
                                 <div className="card-container" key={curElem.id}>
                                     <div className="card">
                                         <div className="card-body">
@@ -38,15 +36,10 @@ function ShowCard({showData}) {
 
                                     </div>
                                 </div>
-
-
-                            </>
                         );
                     })
                 }
             </section>
-        </>
-
     );
 }
 
