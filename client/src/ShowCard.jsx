@@ -29,7 +29,7 @@ function ShowCard({showData}) {
                                                 <img src={curElem.image} alt="images" onClick={ () => goToEvent(curElem)} className="card-image"/>
                                         </div>
                                         <h4 className="show-date">  {curElem.date}
-                                            <span > <button className="buy-tickets" onClick="/"> Buy Tickets </button></span> </h4>
+                                             <button className="buy-tickets" onClick="/"> Buy Tickets </button> </h4>
                                         <div className="card-info">
                                             <span className="card-description"> {curElem.description}</span>
                                         </div>
