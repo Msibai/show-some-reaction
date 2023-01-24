@@ -11,7 +11,11 @@ import { Routes, Route } from "react-router-dom";
 import EventPage from "./EventPage.jsx";
 import AddressBox from "./AddressBox.jsx";
 import SearchByDate from "./SearchByDate.jsx";
+
 import DropDownSearch from "./DropDownSearch.jsx";
+
+import BookingPage from "./BookingPage";
+
 
 function App() {
 
@@ -39,6 +43,7 @@ function App() {
 
                 <Route path="EventPage" element={<EventPage />} />
                 <Route path="AddressBox" element={<AddressBox />} />
+                <Route path="BookingPage" element={<BookingPage/>} />
             </Routes>
 
             <Footer/>

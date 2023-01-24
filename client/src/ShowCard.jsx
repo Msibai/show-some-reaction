@@ -8,6 +8,10 @@ function ShowCard({showData}) {
         const data = curElem;
         navigate("/EventPage" , {state: { id: data.id , description: data.description, artist: data.artist , name: data.name , about: data.about  , life: data.life , category: data.category }})
     }
+
+    function goToBooking(){
+        navigate("/BookingPage")
+    }
     return (
             <section className="main-card-container">
                 {
@@ -29,7 +33,7 @@ function ShowCard({showData}) {
                                                 <img src={curElem.image} alt="images" onClick={ () => goToEvent(curElem)} className="card-image"/>
                                         </div>
                                         <h4 className="show-date">  {curElem.date}
-                                             <button className="buy-tickets" onClick="/"> Buy Tickets </button> </h4>
+                                             <button className="buy-tickets" onClick={ () => goToBooking()}> Buy Tickets </button> </h4>
                                         <div className="card-info">
                                             <span className="card-description"> {curElem.description}</span>
                                         </div>
