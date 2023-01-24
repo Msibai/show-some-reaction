@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className="footer">
                 <nav>
                     <a href="#" className="footer-logo">
-                        <img className="logo" alt="logo" src="src/images/logo.jpg"/>
+                        <img className="logo-footer" alt="logo" src="src/images/logo.jpg"/>
                     </a>
                     <p className="copyright">
                         Copyright &copy; <span className="year">2023</span> by Show some REACTion
