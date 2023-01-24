@@ -1,16 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Navbar from "./Navbar.jsx";
+import EventPage from "./EventPage.jsx";
 import Footer from "./Footer.jsx";
-import { BrowserRouter } from "react-router-dom";
+import ErrorPage from "./ErrorPage.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter(
+  createRoutesFromElements([
+    <Route path="/" element={<App />} errorElement={<ErrorPage />} />,
+    <Route path="EventPage" element={<EventPage />} />,
+  ])
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <BrowserRouter>
-      <App />
-
-  </BrowserRouter>
-
-  </React.StrictMode>,
-)
+    <Navbar />
+    <RouterProvider router={router} />
+    <Footer />
+  </React.StrictMode>
+);
