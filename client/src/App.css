@@ -458,6 +458,7 @@ input:focus {
 .trailer-photo{
     width:100%;
     box-shadow: 5px 5px 10px grey;
+    margin-top: 5rem;
 }
 .trailer-buttons{
     margin-top: 2vh;
@@ -492,7 +493,7 @@ input:focus {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start:1;
-    grid-row-end: 3;
+    grid-row-end: 1;
 }
 .information-section{
     grid-column-start: 1;
