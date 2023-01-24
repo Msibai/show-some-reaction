@@ -13,6 +13,11 @@ import AddressBox from "./AddressBox.jsx";
 import SearchByDate from "./SearchByDate.jsx";
 import Filter from "./Filter.jsx";
 
+import DropDownSearch from "./DropDownSearch.jsx";
+
+import BookingPage from "./BookingPage";
+
+
 function App() {
 
     const [showData, setShowData] = useState(ShowAPI);
@@ -22,19 +27,24 @@ function App() {
         <>
             <Navbar/>
 
-
-
             <Routes>
-                <Route path="/" element={<> <Filter showData={showData} setShowData={setShowData}
-                                                    setFilteredData={setFilteredData}/>
-                    {filteredData ?
+
+                <Route path="/" element={
+                    <div className="home-main-wrapper"><div className="search-wrapper">
+                    <DropDownSearch />
+                    <SearchByName showData={showData} setFilteredData={setFilteredData}/>
+                    <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
+                    <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/></div>{
+                        filteredData ?
+
                     (<ShowCard showData={filteredData} />)
                     :
                     (<ShowCard showData={showData} />)
-                }</>}/>
+                }</div>}/>
 
                 <Route path="EventPage" element={<EventPage />} />
                 <Route path="AddressBox" element={<AddressBox />} />
+                <Route path="BookingPage" element={<BookingPage/>} />
             </Routes>
 
             <Footer/>
