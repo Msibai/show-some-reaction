@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import EventPage from "./EventPage.jsx";
 import AddressBox from "./AddressBox.jsx";
 import SearchByDate from "./SearchByDate.jsx";
+import Filter from "./Filter.jsx";
 
 import DropDownSearch from "./DropDownSearch.jsx";
 
@@ -26,9 +27,8 @@ function App() {
         <>
             <Navbar/>
 
-
-
             <Routes>
+
                 <Route path="/" element={
                     <div className="home-main-wrapper"><div className="search-wrapper">
                     <DropDownSearch />
@@ -36,6 +36,7 @@ function App() {
                     <SearchByPrice showData={showData} setFilteredData={setFilteredData}/>
                     <SearchByDate showData={showData} setShowData={setShowData} setFilteredData={setFilteredData}/></div>{
                         filteredData ?
+
                     (<ShowCard showData={filteredData} />)
                     :
                     (<ShowCard showData={showData} />)

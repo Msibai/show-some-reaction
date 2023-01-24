@@ -6,7 +6,7 @@ function ShowCard({showData}) {
     const navigate = useNavigate()
     function goToEvent(curElem){
         const data = curElem;
-        navigate("/EventPage" , {state: { id: data.id , description: data.description, artist: data.artist , name: data.name , about: data.about  , life: data.life , category: data.category }})
+        navigate("/EventPage" , {state: { trailer: data.trailer , id: data.id , description: data.description, artist: data.artist , name: data.name , about: data.about  , life: data.life , category: data.category }})
     }
 
     function goToBooking(){
@@ -26,9 +26,12 @@ function ShowCard({showData}) {
                                                 <p> {curElem.life}</p>
                                                 <p> {curElem.location}</p>
                                                 <p> {curElem.category}</p>
+                                                <img className="event-trailer" src={curElem.trailer} alt="eventtrailer"/>
+
                                             </div>
 
                                             <h2 className="card-title">{curElem.name}</h2>
+
 
                                                 <img src={curElem.image} alt="images" onClick={ () => goToEvent(curElem)} className="card-image"/>
                                         </div>
