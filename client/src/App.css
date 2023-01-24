@@ -546,68 +546,252 @@ input:focus {
     }
 
 }
-@media (max-width: 1000px){.map-iframe{
-grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start:1;
-    grid-row-end: 3;
-    height: 50vh;
-    border: 1px solid black;
-    width: 15vw;
-}
-.location-headline {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start:1;
-    grid-row-end: 2;
-    margin-top: 1vh;
-    align-content: end;
-}
-.show-address {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start:2;
-    grid-row-end: 3;
-    max-width: 10vw;
-}
-.location-box {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    justify-content: end;
-    margin-right: 5vw;
-    text-align: start;
-}
-.full-event-container{
-    margin-left: 10vw;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr;
-    border:1px solid red;
-}
-.trailer-component{
-    margin-bottom: 3vh;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start:1;
-    grid-row-end: 2;
-    border: 1px solid black;
-}
-.location-box{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start:2;
-    grid-row-end: 3;
-    border: 1px solid purple;
-}
-.information-section{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start:3;
-    grid-row-end: 4;
-    text-align: justify;
-    padding: 1vh;
-    border: 1px solid green;
 
-}}
+
+
+
+
+
+@media (max-width :1250px){
+    .map-iframe{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1;
+        grid-row-end: 3;
+        height: 60%;
+        border: 1px solid black;
+        width: 80%;
+        margin-top: 4vh;
+
+    }
+
+    .location-headline {
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end: 2;
+        margin-top: 1vh;
+        align-content: end;
+
+    }
+
+    .show-address {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+        max-width: 10vw;
+    }
+
+    .location-box{
+        margin-top: 0;
+    }
+
+    .location-box {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        justify-content: center;
+        margin-right: 5vw;
+        row-gap: 2vh;
+        text-align: start;
+        margin-bottom: 2vh;
+
+    }
+    .location-box{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start:2;
+        grid-row-end: 3;
+
+    }
+
+    .directions-link{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end: 3;
+    }
+
+    .full-event-container{
+        margin-left: 10vw;
+        display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.5fr;
+
+
+    }
+    .trailer-component{
+        height: 40%;
+        margin-bottom: 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    .information-section {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: justify;
+        padding: 1vh;
+
+    }
+
+
+    .buy-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 2vw;
+    }
+    .share-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 5vw;
+    }
+
+    .artist-details{
+        width: 30%;
+        float:left;
+
+    }
+
+    .artist-info-section{
+        width:65%;
+
+    }
+}
+
+/*
+
+
+@media (min-width :541px) and (max-width: 1250px){
+    .map-iframe{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1;
+        grid-row-end: 3;
+        height: 60%;
+        border: 1px solid black;
+        width: 80%;
+        margin-top: 4vh;
+
+    }
+
+    .location-headline {
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end: 2;
+        margin-top: 1vh;
+        align-content: end;
+
+    }
+
+    .show-address {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+        max-width: 10vw;
+    }
+
+    .location-box{
+        margin-top: 0;
+    }
+
+    .location-box {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        justify-content: center;
+        margin-right: 5vw;
+        row-gap: 2vh;
+        text-align: start;
+        margin-bottom: 2vh;
+
+    }
+    .location-box{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start:2;
+        grid-row-end: 3;
+
+    }
+
+    .directions-link{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end: 3;
+    }
+
+    .full-event-container{
+        margin-left: 10vw;
+        display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.5fr;
+
+
+    }
+    .trailer-component{
+        height: 40%;
+        margin-bottom: 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    .information-section {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: justify;
+        padding: 1vh;
+
+    }
+
+
+    .buy-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 2vw;
+    }
+    .share-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 5vw;
+    }
+
+    .artist-details{
+        width: 30%;
+        float:left;
+
+    }
+
+    .artist-info-section{
+        width:65%;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
 
