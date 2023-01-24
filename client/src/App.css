@@ -7,15 +7,11 @@ body {
 .home-main-wrapper {
     display: flex;
 }
-
-/********** NavBar **********/
-
-.logo {
+/********** NavBar **********/.logo {
     width: 10%;
     border-radius: 50%;
     margin-right: 5px;
 }
-
 .navigationBar {
     display: flex;
     color: white;
@@ -29,13 +25,16 @@ body {
     justify-content: space-around;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
 }
-
 .navLinks {
     display: flex;
     flex-direction: row;
 }
 
+
+
+
 .navLink {
+
     margin: 1vw;
     align-items: center;
     text-align: center;
@@ -48,7 +47,6 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
-
 .navLink:hover {
     background-color: rgba(239, 94, 94, 0.56);
     color: white;
@@ -56,17 +54,15 @@ body {
     border: 1px solid white;
     cursor: pointer;
 }
-
 .navLink:active {
     transform: translateY(2px) translateX(2px);
 }
-
 /********** Footer **********/
-
-footer {
+.footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 6.4rem;
+    /*padding: 0 3.2rem;*/
     padding: 0.8rem 3.2rem;
     margin: 0 auto;
     color: #eee0e0;
@@ -74,7 +70,6 @@ footer {
     background-color: #232323;
     box-shadow: 0 0 90px 2px #4b4444 inset;
 }
-
 .footer-heading {
     font-size: 1.4rem;
     font-weight: 500;
@@ -82,7 +77,6 @@ footer {
     text-align: left;
     margin-left: 2.6rem;
 }
-
 .footer-nav {
     list-style: none;
     display: flex;
@@ -90,7 +84,6 @@ footer {
     gap: 1rem;
     margin-left: 0;
 }
-
 .footer-icons {
     display: flex;
     flex-direction: row;
@@ -99,7 +92,6 @@ footer {
     list-style: none;
     color: #555;
 }
-
 .footer-link:link,
 .footer-link:visited {
     text-decoration: none;
@@ -108,10 +100,16 @@ footer {
     transition: all 0.3s;
 
 }
-
 .footer-link:hover,
 .footer-link:active {
     color: #555;
+}
+
+/********** ShowCard **********/
+.main-card-container {
+    /*height: 5vh;*/
+    display: flex;
+    flex-direction: row;
 }
 
 .logo-footer {
@@ -126,6 +124,7 @@ footer {
 
 .main-card-container {
     display: flex;
+
     flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
@@ -138,7 +137,8 @@ footer {
     display: flex;
     flex-direction: column;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
-}
+
+  }
 
 .card-body {
     display: flex;
@@ -150,7 +150,16 @@ footer {
     color: white;
     width: 6rem;
     font-size: 13px;
-    border: 1px solid #f35f5f;
+    /*transition-duration: 0.5s;*/
+    margin-left: 1vw;
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
+}
+
+.buy-tickets:active{
+    transform: translateY(2px);
+}
+
+.show-date{
     margin-left: 1vw;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
@@ -174,7 +183,7 @@ footer {
     font-weight: bold;
 }
 
-.card {
+.card{
     border-radius: 5%;
     padding: 15px;
 }
@@ -182,6 +191,7 @@ footer {
 .card-image:hover {
     cursor: pointer;
 }
+
 
 /********** SearchByName **********/
 
@@ -302,7 +312,6 @@ input:focus {
 }
 
 /********** SearchByPrice **********/
-
 .searchByPrice {
     padding: 1px;
     margin: 20px;
@@ -336,7 +345,6 @@ input:focus {
     border: 1px solid grey;
     color: #d72424;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-
 }
 
 .searchByPrice button:hover {
@@ -357,7 +365,6 @@ input:focus {
     overflow: hidden;
     width: 380px;
 }
-
 .searchByDate .container {
     padding: 16px 16px;
     background-color: rgba(196, 24, 24, 0);
@@ -371,10 +378,9 @@ input:focus {
     border: 1px solid grey;
     color: #d72424;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-
 }
 
-.searchByDate button:hover {
+.searchByPrice button:hover {
     background-color: #838383;
     color: white;
     transition: 1s, border 0.5s;
@@ -382,91 +388,119 @@ input:focus {
     cursor: pointer;
 }
 
-.datePicker {
+
+
+.datePicker{
     padding: 10px;
     margin: 10px 0;
 }
-
-.location-box {
+/*event page*/
+.location-box{
     display: grid;
-    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 4fr 0.3fr;
     justify-content: end;
-    margin-right: 5rem;
+    margin-right: 5vw;
     text-align: start;
 }
 
 .location-headline {
-    margin-top: 4rem;
+    margin-top: 1vh;
     align-content: end;
 }
 
-.show-address {
-    max-width: 10rem;
-}
 
-
-.event-category {
-    color: darkred;
-}
-
-.information-section {
-    background-color: #d3d3dc;
-    padding: 20px;
-    width: 80%;
-    display: inline-block;
-    margin-left: 10%;
-    text-align: justify;
-}
-
-.artist-details {
-    width: 15%;
-    float: left;
-    margin-right: 15px;
-}
-
-.artist-pic {
-    width: 150px;
-    border-radius: 50%;
-    display: inline;
-
-}
-
-.artist-name {
-    float: right;
-    margin-right: 110px;
-}
-
-.artist-info-section {
-    width: 80%;
-    display: inline-block;
-}
-
-.location-headline {
-    margin-top: 4rem;
-    align-content: end;
-}
 
 .show-address {
-    max-width: 10rem;
+    max-width:10vw;
 }
+
 
 .directions-link {
     color: darkred;
     text-align: center;
     text-decoration: none;
 }
-
 .directions-link:hover {
     color: #f35f5f;
 }
-
 .map-iframe {
     height: 50vh;
+    border: 1px solid black;
     width: 15vw;
 }
-
 .boldWord {
     font-weight: bold;
+}
+.artist-details{
+    width: 10vw;
+    float:left;
+    margin-right: 1vw;
+}
+.artist-pic{
+    width: 8vw;
+    border-radius: 50%;
+    display: inline;
+}
+.artist-name{
+    float: right;
+    margin-right: 5vw;
+}
+.artist-info-section{
+    width: 53vw;
+    display: inline-block;
+}
+.full-event-container{
+    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr;
+}
+.trailer-photo{
+    width:100%;
+    box-shadow: 5px 5px 10px grey;
+}
+.trailer-buttons{
+    margin-top: 2vh;
+    text-align: right;
+}
+.buy-button{
+    margin-right: 2vw;
+    background-color: #ce5858;
+    color: white;
+    height: 6vh;
+}
+.share-button{
+    margin-left:2vw;
+    margin-right:1vw;
+    background-color: #ce5858;
+    color: white;
+    height: 6vh;
+}
+
+.hide-show-button{
+    background-color: #3c4b66;
+    color: white;
+}
+.trailer-component{
+    margin-bottom: 3vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+.location-box{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:1;
+    grid-row-end: 3;
+}
+.information-section{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:2;
+    grid-row-end: 3;
+    text-align: justify;
+    padding: 1vh;
 }
 
 @media (max-width: 700px) {
@@ -511,5 +545,125 @@ input:focus {
         display: none;
     }
 
-
 }
+
+
+
+
+
+
+@media (max-width :1250px){
+    .map-iframe{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1;
+        grid-row-end: 3;
+        height: 60%;
+        border: 1px solid black;
+        width: 80%;
+        margin-top: 4vh;
+
+    }
+
+    .location-headline {
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end: 2;
+        margin-top: 1vh;
+        align-content: end;
+
+    }
+
+    .show-address {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+        max-width: 10vw;
+    }
+
+    .location-box{
+        margin-top: 0;
+    }
+
+    .location-box {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        justify-content: center;
+        margin-right: 5vw;
+        row-gap: 2vh;
+        text-align: start;
+        margin-bottom: 2vh;
+
+    }
+    .location-box{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start:2;
+        grid-row-end: 3;
+
+    }
+
+    .directions-link{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end: 3;
+    }
+
+    .full-event-container{
+        margin-left: 10vw;
+        display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.5fr;
+
+
+    }
+    .trailer-component{
+        height: 40%;
+        margin-bottom: 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    .information-section {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: justify;
+        padding: 1vh;
+
+    }
+
+
+    .buy-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 2vw;
+    }
+    .share-button{
+        height: 4vh;
+        font-size: 10px;
+        margin-right: 5vw;
+    }
+
+    .artist-details{
+        width: 30%;
+        float:left;
+
+    }
+
+    .artist-info-section{
+        width:65%;
+
+    }
+}
+
+
+
+

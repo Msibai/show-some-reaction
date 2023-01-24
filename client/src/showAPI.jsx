@@ -8,7 +8,7 @@ const ShowAPI = [
 
         artist: "src/images/kanan.jpg",
 
-        trailer: "src/images/first.jpg",
+        trailer: "src/images/aashishfull.jpg",
 
         name: "Ashish",
 
@@ -95,7 +95,7 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
-        trailer: "src/images/fourth.jpg",
+        trailer: "src/images/jaspreetfull.jpg",
 
         name: "Jaspreet",
 
@@ -124,7 +124,7 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
-        trailer: "src/images/fifth.jpg",
+        trailer: "src/images/harshfull.jpg",
 
         name: "Harsh",
 
@@ -153,7 +153,7 @@ const ShowAPI = [
 
         artist: "src/images/ashish.jpg",
 
-        trailer: "src/images/sixth.jpg",
+        trailer: "src/images/javedfull.jpg",
 
         name: "Javed",
 
