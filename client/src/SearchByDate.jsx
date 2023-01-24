@@ -48,9 +48,9 @@ export default function SearchByDate(props) {
     }
 
     return (
-        <div className="SearchByDate">
+        <div className="searchByDate">
             <div className="container">
-                <h3 className="date">Which date is best for you?</h3>
+                <p className="date">Which date is best for you?</p>
                 <div className="innerContainer">
                     <button onClick={sortByDate}>Sort by date</button>
                     <button onClick={getTodaysShow}>Today's shows</button>
