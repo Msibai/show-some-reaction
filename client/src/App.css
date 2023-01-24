@@ -7,7 +7,9 @@ body {
 .home-main-wrapper {
     display: flex;
 }
-/********** NavBar **********/.logo {
+/********** NavBar **********/
+
+.logo {
     width: 10%;
     border-radius: 50%;
     margin-right: 5px;
@@ -25,13 +27,11 @@ body {
     justify-content: space-around;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
 }
+
 .navLinks {
     display: flex;
     flex-direction: row;
 }
-
-
-
 
 .navLink {
 
@@ -124,7 +124,6 @@ body {
 
 .main-card-container {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
@@ -137,7 +136,6 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
-
   }
 
 .card-body {
@@ -150,8 +148,7 @@ body {
     color: white;
     width: 6rem;
     font-size: 13px;
-    /*transition-duration: 0.5s;*/
-    margin-left: 1vw;
+    margin-left: 5px;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 
@@ -160,7 +157,7 @@ body {
 }
 
 .show-date{
-    margin-left: 1vw;
+    margin-left: 5px;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 
@@ -380,7 +377,7 @@ input:focus {
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
 }
 
-.searchByPrice button:hover {
+.searchByDate button:hover {
     background-color: #838383;
     color: white;
     transition: 1s, border 0.5s;
@@ -388,12 +385,15 @@ input:focus {
     cursor: pointer;
 }
 
-
-
 .datePicker{
     padding: 10px;
     margin: 10px 0;
 }
+
+.show-wrapper {
+    display: none;
+}
+
 /*event page*/
 .location-box{
     display: grid;
@@ -407,8 +407,6 @@ input:focus {
     margin-top: 1vh;
     align-content: end;
 }
-
-
 
 .show-address {
     max-width:10vw;
@@ -533,16 +531,12 @@ input:focus {
         align-self: center;
     }
 
-    .searchByName {
+    .search-wrapper {
         display: none;
     }
 
-    .searchByPrice {
-        display: none;
-    }
-
-    .searchByDate {
-        display: none;
+    .show-wrapper {
+        display: block;
     }
 
 }

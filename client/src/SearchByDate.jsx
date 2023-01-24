@@ -54,7 +54,7 @@ export default function SearchByDate(props) {
                 <div className="innerContainer">
                     <button onClick={sortByDate}>Sort by date</button>
                     <button onClick={getTodaysShow}>Today's shows</button>
-                    <button onClick={getAllShow}>All Show</button>
+                    <button onClick={getAllShow}>All Shows</button>
                 </div>
                 <div className="datePicker">
                     <label htmlFor="from">From</label>
