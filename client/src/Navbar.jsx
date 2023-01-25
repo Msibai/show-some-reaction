@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import logo from './images/logo.jpg'
 
+
 const Navbar = () => {
     return (
         <>
