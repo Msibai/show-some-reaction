@@ -5,6 +5,7 @@ import Filter from "./Filter.jsx";
 import ShowCard from "./ShowCard.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
 
+
 function App() {
   const [showData, setShowData] = useState(ShowAPI);
   const [filteredData, setFilteredData] = useState(null);
