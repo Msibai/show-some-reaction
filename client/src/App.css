@@ -13,6 +13,21 @@ body {
     width: 10%;
     border-radius: 50%;
     margin-right: 5px;
+
+}
+
+.logo:hover{
+    cursor: pointer;
+    animation-name:logoHover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes logoHover{
+    0%{opacity:100%}
+    100%{opacity:60%}
 }
 .navigationBar {
     display: flex;
