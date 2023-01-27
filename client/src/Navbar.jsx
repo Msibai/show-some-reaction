@@ -7,12 +7,16 @@ function SignUp() {
   window.open("Register", "_self");
 }
 
+function goToHome(){
+    window.open('/','_self')
+}
+
 const Navbar = () => {
   return (
     <BrowserRouter>
       <>
         <div className="navigationBar">
-          <img className="logo" src={logo}></img>
+          <img className="logo" src={logo} onClick={goToHome}></img>
           <h1 className="pageTitle"> Show some REACTion </h1>
           <div className="navLinks">
             <button className="navLink" id="logIn">
