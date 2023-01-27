@@ -28,7 +28,10 @@ const Navbar = () => {
     function goToMyPages(){
         window.open('/', '_self');
     }
-    function goToSignup(){
+    function SignUp(){
+        window.open('/', '_self');
+    }
+    function goToHome(){
         window.open('/', '_self');
     }
 
@@ -36,7 +39,7 @@ const Navbar = () => {
     return (
         <>
             <div className='navigationBar'>
-                <img className='logo' src={logo}></img>
+                <img className='logo' src={logo} onClick={goToHome}></img>
                 <h1 className='pageTitle'> Show some REACTion </h1>
                 {
                     auth ?
@@ -52,7 +55,7 @@ const Navbar = () => {
                         <div className='navLinks'>
 
                     <button onClick={goToLogin} className="navLink"><span className="nav-icon"><Icon icon={logIn} size={25}></Icon></span> LogIn</button>
-                            <button onClick={goToSignup} className="navLink"><span className="nav-icon"><Icon icon={personAdd} size={25}></Icon></span> SignUp</button> </div>
+                            <button onClick={SignUp} className="navLink"><span className="nav-icon"><Icon icon={personAdd} size={25}></Icon></span> SignUp</button> </div>
                     }
 
                 </div>
