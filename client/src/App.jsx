@@ -4,6 +4,7 @@ import ShowAPI from "./ShowAPI.jsx";
 import Filter from "./Filter.jsx";
 import ShowCard from "./ShowCard.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
+import Register from "./Register.jsx";
 
 function App() {
   const [showData, setShowData] = useState(ShowAPI);
@@ -24,6 +25,7 @@ function App() {
           setShowData={setShowData}
           setFilteredData={setFilteredData}
         />
+          <Register />
       </div>
       {filteredData ? (
         <ShowCard showData={filteredData} />
