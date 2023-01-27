@@ -12,7 +12,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {Icon} from "react-icons-kit";
 
 const Navbar = () => {
-    let auth = true;
+    let auth = false;
 
     const goToLogOut = () => {
     }
@@ -44,7 +44,7 @@ const Navbar = () => {
                             <button onClick={goToMyPages} className="navLink"><span className="nav-icon">  <Icon icon={androidCreate} size={25}></Icon></span> My Pages</button>
                             <button onClick={goToProfile} className="navLink"><span className="nav-icon"> <Icon icon={androidContact} size={25}></Icon></span> My Profile</button>
                             <button onClick={goToLogOut} className="navLink"><span className="nav-icon"><Icon icon={logOut} size={25}></Icon></span> Log out</button>
-                            <div className= "user-profile-icon-container"><Icon  className="profile-icon" icon={androidPerson} size={55}></Icon>
+                            <div className= "user-profile-icon-container"><Icon  className="profile-icon" icon={androidPerson} size={105}></Icon>
                             <h3 className="logged-user" > User </h3></div>
 
                         </div>

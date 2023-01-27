@@ -32,29 +32,32 @@ body {
 .navLinks {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
 }
 
 .navLink {
     margin: 1rem;
-    align-items: center;
     text-align: center;
     font-family: lato;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 1px;
     background: #840032;
     color: white;
-    width: 13rem;
+    width: 10rem;
+    height: 3rem;
 
 }
 
+
 .nav-icon{
     margin-right: 1rem;
+
 }
 .navLink:hover {
     background-color: rgba(239, 94, 94, 0.56);
     color: white;
     transition: background-color 1s, border 0.5s;
-    border: 1px solid white;
     cursor: pointer;
 }
 .navLink:active {
@@ -63,8 +66,7 @@ body {
 
 .user-profile-icon-container{
     margin-left:2rem;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
 }
 .profile-icon {
    text-align: center;
