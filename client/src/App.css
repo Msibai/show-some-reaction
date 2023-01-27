@@ -674,6 +674,33 @@ input:focus {
     }
 }
 
+.register-container {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    text-align: start;
+    background-color: #E5DADA;
+    color: #002642;
+    margin: 4rem 2rem;
+    max-width: 22rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.input-box {
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
 
 
+.register-btn {
+    display: flex;
+    background-color: #002642;
+    color: white;
+    margin: 2rem auto;
+}
 
+.register-form {
+    margin-left: 2rem;
+}
