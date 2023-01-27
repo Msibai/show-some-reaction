@@ -8,12 +8,12 @@ import {androidContact} from 'react-icons-kit/ionicons/androidContact'
 import {logOut} from 'react-icons-kit/ionicons/logOut'
 import {logIn} from 'react-icons-kit/ionicons/logIn'
 import {personAdd} from 'react-icons-kit/ionicons/personAdd'
-import {Link, useNavigate} from "react-router-dom";
+import {BrowserRouter, Link, useNavigate} from "react-router-dom";
 import {Icon} from "react-icons-kit";
 
-const Navbar = () => {
-    let auth = false;
 
+function SignUp() {
+    window.open("Register", "_self");}
     const goToLogOut = () => {
     }
 
@@ -28,15 +28,13 @@ const Navbar = () => {
     function goToMyPages(){
         window.open('/', '_self');
     }
-    function SignUp(){
-        window.open('/', '_self');
-    }
     function goToHome(){
         window.open('/', '_self');
     }
 
-
+const Navbar = () => { let auth = true;
     return (
+        <BrowserRouter>
         <>
             <div className='navigationBar'>
                 <img className='logo' src={logo} onClick={goToHome}></img>
@@ -55,13 +53,14 @@ const Navbar = () => {
                         <div className='navLinks'>
 
                     <button onClick={goToLogin} className="navLink"><span className="nav-icon"><Icon icon={logIn} size={25}></Icon></span> LogIn</button>
-                            <button onClick={SignUp} className="navLink"><span className="nav-icon"><Icon icon={personAdd} size={25}></Icon></span> SignUp</button> </div>
+                            <button onClick={SignUp} className="navLink"><span className="nav-icon" id="signUp"><Icon icon={personAdd} size={25}></Icon></span> SignUp</button> </div>
                     }
 
                 </div>
 
 </>
-    )
-}
+        </BrowserRouter>
+    )}
+
 
 export default Navbar;
