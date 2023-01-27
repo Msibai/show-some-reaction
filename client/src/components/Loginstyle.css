@@ -1,10 +1,9 @@
 @import url("https://fonts.google.com/specimen/Playfair+Display?query=play");
 @import url("https://fonts.google.com/specimen/Lato?query=lato");
+
 .login-form-container{
     text-align: center;
-    height: 50rem;
-    width: 2000px;
-    background-image: url('src/images/use2.jpg');
+    background-image: url('src/images/tryback.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -18,7 +17,7 @@
 
 .login-logo{
     margin-top: 2rem;
-    width:100px;
+    width:90px;
     border-radius: 50%;
 }
 
@@ -26,7 +25,7 @@
     background-color: #840032 ;
     color: white;
     font-family: lato;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 
@@ -53,7 +52,7 @@
     margin-bottom: 1rem;
 border: 1px solid #840032;
     width: 21rem;
-    background: transparent;
+    background: white;
 }
 
 .password{
@@ -61,6 +60,8 @@ border: 1px solid #840032;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     background: transparent;
+    background: white;
+
 
 
 }
@@ -72,6 +73,8 @@ border: 1px solid #840032;
     border: 1px solid #840032;
     height: 2.9rem;
     overflow: hidden;
+    background: white;
+
 }
 .welcome-message{
     font-family: playfair;
