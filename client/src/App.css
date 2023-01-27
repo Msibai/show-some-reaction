@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -660,5 +661,20 @@ input:focus {
 }
 
 
+/****************LogIn Page*****************/
+
+.login-form-container{
+    height: 50rem;
+    width: 2000px;
+    background-image: url('src/images/use2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
 
 
