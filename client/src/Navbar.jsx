@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './App.css';
 import logo from './images/logo.jpg'
@@ -61,6 +62,5 @@ const Navbar = () => { let auth = true;
 </>
         </BrowserRouter>
     )}
-
 
 export default Navbar;
