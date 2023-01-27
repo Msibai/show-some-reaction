@@ -19,14 +19,14 @@ export const Register = () => {
           <label htmlFor="name">Full name:</label>
           <input
             className="input-box"
-            value={name}
+            type="text"
             id="name"
             placeholder="Firstname Lastname"
           />
           <label htmlFor="email">E-mail:</label>
           <input
             className="input-box"
-            value={email}
+            type="email"
             name="email"
             id="email"
             placeholder="E-mail"
@@ -34,7 +34,7 @@ export const Register = () => {
           <label htmlFor="password">Password:</label>
           <input
             className="input-box"
-            value={password}
+            type="password"
             name="password"
             id="password"
             placeholder="Password"
@@ -42,9 +42,9 @@ export const Register = () => {
           <label htmlFor="country">Country:</label>
           <input
             className="input-box"
-            value={country}
+            type="text"
             name="country"
-            id="password"
+            id="country"
             placeholder="Country"
           />
           <button className="register-btn">Register</button>
