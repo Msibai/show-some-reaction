@@ -38,7 +38,7 @@ function ShowCard({showData}) {
                                         <h4 className="show-date">  {curElem.date}
                                              <button className="buy-tickets" onClick={ () => goToBooking()}> Buy Tickets </button> </h4>
                                         <div className="card-info">
-                                            <span className="card-description"> {curElem.description}</span>
+                                            <span className="card-description">{curElem.description}</span>
                                         </div>
 
                                     </div>
