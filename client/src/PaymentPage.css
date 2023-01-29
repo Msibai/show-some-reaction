@@ -1,0 +1,35 @@
+
+
+.payment-card-input {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    border: 1px solid gray;
+    width: 15vw;
+    font-family:"Playfair Display";
+
+}
+
+
+.buy-tickets-button{
+    font-family:"lato";
+    background-color: #8a0537;
+    color: white;
+    margin-top: 4rem;
+    margin-left: 3rem;
+
+}
+
+
+.payment-page-component{
+    width: 2000px;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 5rem;
+
+}
+
+

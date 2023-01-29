@@ -13,12 +13,16 @@ import EventPage from "./EventPage.jsx";
 import Footer from "./Footer.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import BookingPage from "./BookingPage.jsx";
+import PaymentPage from "./PaymentPage.jsx";
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements([
     <Route path="/" element={<App />} errorElement={<ErrorPage />} />,
     <Route path="EventPage" element={<EventPage />} />,
-      <Route path ="BookingPage" element={<BookingPage />}/>
+      <Route path ="BookingPage" element={<BookingPage />}/>,
+      <Route path ="PaymentPage" element={<PaymentPage />}/>
 
   ])
 );
