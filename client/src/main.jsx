@@ -17,12 +17,22 @@ import PaymentPage from "./PaymentPage.jsx";
 
 
 
+import Login from "./components/Login.jsx";
+import Register from "./Register.jsx";
+
+
 const router = createBrowserRouter(
   createRoutesFromElements([
     <Route path="/" element={<App />} errorElement={<ErrorPage />} />,
     <Route path="EventPage" element={<EventPage />} />,
+
       <Route path ="BookingPage" element={<BookingPage />}/>,
-      <Route path ="PaymentPage" element={<PaymentPage />}/>
+      <Route path ="PaymentPage" element={<PaymentPage />}/>,
+
+
+      <Route path="Login" element={<Login />} />,
+    <Route path="BookingPage" element={<BookingPage />} />,
+    <Route path="Register" element={<Register />} />,
 
   ])
 );
