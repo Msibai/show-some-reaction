@@ -63,7 +63,7 @@ function SignIn(props) {
             </span>
           </div>
           <button className="login-button">Log In</button>
-          <Link to={"/"} className="text-for-signup">
+          <Link to={"/signup"} className="text-for-signup">
             {" "}
             Don't have an account? Go to Sign Up
           </Link>
