@@ -13,13 +13,16 @@ import EventPage from "./EventPage.jsx";
 import Footer from "./Footer.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import BookingPage from "./BookingPage.jsx";
+import Login from "./components/Login.jsx";
+import Register from "./Register.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
     <Route path="/" element={<App />} errorElement={<ErrorPage />} />,
     <Route path="EventPage" element={<EventPage />} />,
-      <Route path ="BookingPage" element={<BookingPage />}/>
-
+      <Route path="Login" element={<Login />} />,
+    <Route path="BookingPage" element={<BookingPage />} />,
+    <Route path="Register" element={<Register />} />,
   ])
 );
 
