@@ -708,6 +708,125 @@ input:focus {
 }
 
 
+/**********BookingPage**********/
+
+
+.select-a-show-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #840032;
+    margin: 4.8rem 5rem;
+    border-radius: 10px;
+    padding: 1.5rem 2.2rem;
+    box-shadow: -2px -2px 6px #E5DADA, 1px 1px 2px #E5DADA;
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+}
+
+.choose-a-show-headline {
+    color: #002642;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3.8rem;
+}
+
+.drop-down-seat-button {
+    background-color: #E5DADA;
+    border: 1px solid #840032;
+    color: #840032;
+    margin-left: 3.5rem;
+    box-shadow: 1px 1px 2px #E5DADA;
+}
+
+.more-or-less-button {
+    background-color: #E5DADA;
+    border: 1px solid #840032;
+    color: #840032;
+    height: 40px;
+    width: 45px;
+    align-self: center;
+    padding: 0.5rem;
+    margin: -1.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.choose-number-of-seats {
+    color: #02040F;
+}
+
+.choose-number-of-tickets {
+    display: flex;
+    position: absolute;
+    border: 1px solid #840032;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: -4.4rem;
+    margin-top: 0.5rem;
+    box-shadow: -2px -2px 6px #E5DADA, 1px 1px 2px #E5DADA;
+}
+
+.seat-input {
+    border: 1px solid #E5DADA;
+    font-weight: lighter;
+    color: #02040F;
+    margin: 2rem 1rem;
+    width: 0.9rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.seat-paragraph {
+    align-self: center;
+    margin: -1rem 0.5rem 0.5rem 0.5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.submit-seats-button {
+    background-color: #840032;
+    border-radius: 10px;
+    color: white;
+    padding: 0.6rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.submit-seats-button:hover {
+    background-color: #E5DADA;
+    color: #02040F;
+    transition: background-color 1.5s, color 1s;
+    cursor: pointer;
+}
+
+.submit-seats-button:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.drop-down-seat-button:hover {
+    background-color: #840032;
+    border-color: white;
+    color: white;
+    transition: background-color 1.2s, color 1s, border-color 1s;
+    cursor: pointer;
+}
+
+.drop-down-seat-button:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.more-or-less-button:hover {
+    background-color: #840032;
+    border-color: white;
+    color: white;
+    transition: background-color 1.2s, color 1s, border-color 1s;
+    cursor: pointer;
+}
+
+.more-or-less-button:active {
+    transform: translateY(2px) translateX(2px);
+
 .input-box {
     border: 1px solid black;
     margin-bottom: 1rem;
