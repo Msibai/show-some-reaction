@@ -1,11 +1,11 @@
-import "./App.css";
+import "../App.css";
 import React, { useState } from "react";
-import ShowAPI from "./ShowAPI.jsx";
+import ShowAPI from "../showAPI.jsx";
 import Filter from "./Filter.jsx";
 import ShowCard from "./ShowCard.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
 
-function App() {
+function Home() {
   const [showData, setShowData] = useState(ShowAPI);
   const [filteredData, setFilteredData] = useState(null);
 
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
