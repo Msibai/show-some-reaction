@@ -931,3 +931,17 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid white;
     cursor: pointer;
 }
+
+.text-for-signup:hover{
+    animation-name:signUpHover;
+    animation-duration:0.3s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes signUpHover{
+    0%{color:black;}
+    100%{color:red;}
+
+}
