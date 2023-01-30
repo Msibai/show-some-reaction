@@ -1,13 +1,13 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
       <footer className="footer">
         <nav>
-          <a href="#" className="footer-logo">
+          <a href="src#" className="footer-logo">
             <img className="logo-footer" alt="logo" src="src/images/logo.jpg" />
           </a>
           <p className="copyright">
@@ -20,17 +20,32 @@ const Footer = () => {
           <p className="footer-heading">Follow us</p>
           <ul className="footer-icons">
             <li>
-              <a className="footer-icon" href="#">
+              <a
+                className="footer-link"
+                href="https://www.facebook.com/"
+                rel="noopener"
+                target="_blank"
+              >
                 <FaFacebook />
               </a>
             </li>
             <li>
-              <a className="footer-icon" href="#">
+              <a
+                className="footer-link"
+                href="https://www.instagram.com/"
+                rel="noopener"
+                target="_blank"
+              >
                 <FaInstagram />
               </a>
             </li>
             <li>
-              <a className="footer-icon" href="#">
+              <a
+                className="footer-link"
+                href="https://twitter.com/"
+                rel="noopener"
+                target="_blank"
+              >
                 <FaTwitter />
               </a>
             </li>
@@ -41,10 +56,12 @@ const Footer = () => {
           <p className="footer-heading">Account</p>
           <ul className="footer-nav">
             <li>
-              <button className="footer-link">Sign Up</button>
+              <Link to="signup">Create account</Link>
             </li>
             <li>
-              <button className="footer-link">Sign In</button>
+              <Link to="login" className="footer-link">
+                Sign in
+              </Link>
             </li>
           </ul>
         </nav>
