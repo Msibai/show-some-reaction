@@ -122,10 +122,17 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     list-style: none;
     color: #555;
 }
+
+.footer-icon {
+    font-size: 2rem;
+    color: #555
+}
+
+
 .footer-link:link,
 .footer-link:visited {
     text-decoration: none;
