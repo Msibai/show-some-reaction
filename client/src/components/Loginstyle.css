@@ -1,0 +1,93 @@
+@import url("https://fonts.google.com/specimen/Playfair+Display?query=play");
+@import url("https://fonts.google.com/specimen/Lato?query=lato");
+
+.login-form-container{
+    text-align: center;
+    background-image: url('src/images/tryback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form{
+    margin-left: 40%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-logo{
+    margin-top: 2rem;
+    width:90px;
+    border-radius: 50%;
+}
+
+.login-button{
+    background-color: #840032 ;
+    color: white;
+    font-family: lato;
+    margin-top: 3rem;
+}
+
+
+.email-label{
+    font-family: lato;
+    text-align: start;
+    font-size: 18px;
+    font-weight: bolder;
+
+
+}
+
+.pass-label{
+    font-family: lato;
+    text-align: start;
+    font-size: 18px;
+    font-weight: bolder;
+
+
+}
+
+.email{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+border: 1px solid #840032;
+    width: 21rem;
+    background: white;
+}
+
+.password{
+    width:21rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    background: transparent;
+    background: white;
+
+
+
+}
+
+.pass-eye-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #840032;
+    height: 2.9rem;
+    overflow: hidden;
+    background: white;
+
+}
+.welcome-message{
+    font-family: playfair;
+    font-size: 36px;
+}
+
+.text-for-signup{
+    text-align: center;
+    margin-top:2rem;
+    color: #0a0a0a;
+    font-family: lato;
+    font-size: 20px;
+}
+.pass-eye-div span{
+    cursor: pointer;
+}
