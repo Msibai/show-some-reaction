@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-logo:hover {
     cursor: pointer;
     animation-name: logoHover;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -749,6 +749,7 @@ input:focus {
 }
 
 
+
 /**********BookingPage**********/
 
 
@@ -872,7 +873,10 @@ input[type=number]::-webkit-inner-spin-button {
 .input-box {
     border: 1px solid black;
     margin-bottom: 1rem;
+    background-color:white;
 }
+
+
 
 
 
@@ -880,7 +884,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .login-form-container {
     height: 50rem;
-    width: 2000px;
+    width: 100%;
     background-image: url('src/images/use2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -894,7 +898,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .register-btn {
     display: flex;
-    background-color: #002642;
+    background-color: #840032;
     color: white;
     margin: 2rem auto;
 }
@@ -903,3 +907,27 @@ input[type=number]::-webkit-inner-spin-button {
     margin-left: 2rem;
 }
 
+.pass-eye-div{
+    height:30px;
+    width:300px;
+}
+
+.email{
+    width:300px;
+}
+
+.login-button:hover{
+    background-color: rgba(10, 10, 10, 0.57);
+    color: white;
+    transition: background-color 1s, border 0.5s;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.register-btn:hover{
+    background-color: rgba(10, 10, 10, 0.57);
+    color: white;
+    transition: background-color 1s, border 0.5s;
+    border: 1px solid white;
+    cursor: pointer;
+}
