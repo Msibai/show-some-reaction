@@ -14,9 +14,6 @@ import Footer from "./Footer.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import BookingPage from "./BookingPage.jsx";
 import PaymentPage from "./PaymentPage.jsx";
-
-
-
 import Login from "./components/Login.jsx";
 import Register from "./Register.jsx";
 
@@ -33,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="Login" element={<Login />} />,
     <Route path="BookingPage" element={<BookingPage />} />,
     <Route path="Register" element={<Register />} />,
+      <Route path="PaymentPage" element={<PaymentPage />} />,
 
   ])
 );
