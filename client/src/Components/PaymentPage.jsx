@@ -1,5 +1,5 @@
 import React from 'react';
-import "./PaymentPage.css";
+import "../css/PaymentPage.css";
 
 function PaymentPage(props) {
     return (

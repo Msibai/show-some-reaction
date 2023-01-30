@@ -1,15 +1,24 @@
 
-
-
 body {
     margin: 0;
     padding: 0;
-    font-family: "Verdana", sans-serif;
+    font-family: var(--text-font);
+}
+
+main {
+    min-height: calc(100vh - 240px - 140px);
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
 }
 
 .home-main-wrapper {
     display: flex;
 }
+
 /********** NavBar **********/
 
 .logo {
@@ -19,19 +28,22 @@ body {
 
 }
 
-.logo:hover{
+@keyframes logoHover {
+    0% {
+        opacity: 100%
+    }
+    100% {
+        opacity: 60%
+    }
+}
+
+.header-logo:hover {
     cursor: pointer;
-    animation-name:logoHover;
-    animation-duration:0.1s;
+    animation-name: logoHover;
+    animation-duration: 0.1s;
     animation-fill-mode: forwards;
 }
 
-
-
-@keyframes logoHover{
-    0%{opacity:100%}
-    100%{opacity:60%}
-}
 .navigationBar {
     display: flex;
     color: white;
@@ -56,8 +68,7 @@ body {
 .navLink {
     margin: 1rem;
     text-align: center;
-    font-family: lato;
-    font-size: 15px;
+    font-family: "Avenir", sans-serif;
     letter-spacing: 1px;
     background: #840032;
     color: white;
@@ -67,34 +78,40 @@ body {
 }
 
 
-.nav-icon{
+.nav-icon {
     margin-right: 1rem;
 
 }
+
 .navLink:hover {
     background-color: rgba(239, 94, 94, 0.56);
     color: white;
     transition: background-color 1s, border 0.5s;
+    border: 1px solid white;
     cursor: pointer;
 }
+
 .navLink:active {
     transform: translateY(2px) translateX(2px);
 }
 
-.user-profile-icon-container{
-    margin-left:2rem;
+.user-profile-icon-container {
+    margin-left: 2rem;
     display: inline-block;
 }
+
 .profile-icon {
-   text-align: center;
+    text-align: center;
 }
 
-.logged-user{
+.logged-user {
     text-align: center;
 
 }
+
 /********** Footer **********/
 .footer {
+    height: 240px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 6.4rem;
@@ -106,6 +123,7 @@ body {
     background-color: #232323;
     box-shadow: 0 0 90px 2px #4b4444 inset;
 }
+
 .footer-heading {
     font-size: 1.4rem;
     font-weight: 500;
@@ -113,6 +131,7 @@ body {
     text-align: left;
     margin-left: 2.6rem;
 }
+
 .footer-nav {
     list-style: none;
     display: flex;
@@ -120,14 +139,22 @@ body {
     gap: 1rem;
     margin-left: 0;
 }
+
 .footer-icons {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     list-style: none;
     color: #555;
 }
+
+.footer-icon {
+    font-size: 2rem;
+    color: #555
+}
+
+
 .footer-link:link,
 .footer-link:visited {
     text-decoration: none;
@@ -136,6 +163,7 @@ body {
     transition: all 0.3s;
 
 }
+
 .footer-link:hover,
 .footer-link:active {
     color: #555;
@@ -172,7 +200,7 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
-  }
+}
 
 .card-body {
     display: flex;
@@ -188,11 +216,11 @@ body {
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 
-.buy-tickets:active{
+.buy-tickets:active {
     transform: translateY(2px);
 }
 
-.show-date{
+.show-date {
     margin-left: 5px;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
@@ -216,7 +244,7 @@ body {
     font-weight: bold;
 }
 
-.card{
+.card {
     border-radius: 5%;
     padding: 15px;
 }
@@ -226,7 +254,7 @@ body {
 }
 
 
-/********** SearchByName **********/
+/********** search-by-name **********/
 
 .drop-down-search {
     display: none;
@@ -250,7 +278,7 @@ body {
     display: block;
 }
 
-.searchByName {
+.search-by-name {
     padding: 1px;
     margin: 20px;
     border-radius: 10px;
@@ -259,7 +287,7 @@ body {
     width: 380px;
 }
 
-.searchByName .container {
+.search-by-name .container {
     padding: 16px 16px;
     background-color: rgba(54, 51, 51, 0);
     border-radius: 10px;
@@ -274,7 +302,7 @@ label, .budget, .date {
     -webkit-text-fill-color: transparent;
 }
 
-.innerContainer {
+.inner-container {
     display: flex;
 }
 
@@ -293,7 +321,7 @@ label, .budget, .date {
     transform: translate(-1px, -1px);
 }
 
-.inputContainer {
+.input-container {
     width: 100%;
     --top-shadow: inset 1px 1px 3px #a4a4a4, inset 2px 2px 6px rgb(75, 68, 68);
     --bottom-shadow: inset -2px -2px 4px rgba(255, 255, 255, .7);
@@ -302,8 +330,8 @@ label, .budget, .date {
     overflow: hidden;
 }
 
-.inputContainer:before,
-.inputContainer:after {
+.input-container:before,
+.input-container:after {
     left: 0;
     top: 0;
     display: block;
@@ -314,15 +342,15 @@ label, .budget, .date {
     position: absolute;
 }
 
-.inputContainer:before {
+.input-container:before {
     box-shadow: var(--bottom-shadow);
 }
 
-.inputContainer:after {
+.input-container:after {
     box-shadow: var(--top-shadow);
 }
 
-input {
+.search-by-name input, .search-by-date input, .search-by-price input {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 16px 32px;
     border: none;
@@ -344,8 +372,8 @@ input:focus {
     background-color: #eff5fa;
 }
 
-/********** SearchByPrice **********/
-.searchByPrice {
+/********** search-by-price **********/
+.search-by-price {
     padding: 1px;
     margin: 20px;
     border-radius: 10px;
@@ -354,7 +382,7 @@ input:focus {
     width: 380px;
 }
 
-.searchByPrice .container {
+.search-by-price .container {
     padding: 16px 16px;
     background-color: rgba(54, 51, 51, 0);
     border-radius: 10px;
@@ -370,17 +398,17 @@ input:focus {
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
 }
 
-.searchByPrice input {
+.search-by-price input {
     width: 65%;
 }
 
-.searchByPrice button {
+.search-by-price button {
     border: 1px solid grey;
     color: #d72424;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
 }
 
-.searchByPrice button:hover {
+.search-by-price button:hover {
     background-color: #838383;
     color: white;
     transition: 1s, border 0.5s;
@@ -388,9 +416,9 @@ input:focus {
     cursor: pointer;
 }
 
-/********** SearchByDate **********/
+/********** search-by-date **********/
 
-.searchByDate {
+.search-by-date {
     padding: 1px;
     margin: 20px;
     border-radius: 10px;
@@ -398,13 +426,14 @@ input:focus {
     overflow: hidden;
     width: 380px;
 }
-.searchByDate .container {
+
+.search-by-date .container {
     padding: 16px 16px;
     background-color: rgba(196, 24, 24, 0);
     border-radius: 10px;
 }
 
-.searchByDate button {
+.search-by-date button {
     width: 120px;
     margin: 15px 5px;
     font-size: small;
@@ -413,7 +442,7 @@ input:focus {
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
 }
 
-.searchByDate button:hover {
+.search-by-date button:hover {
     background-color: #838383;
     color: white;
     transition: 1s, border 0.5s;
@@ -421,7 +450,7 @@ input:focus {
     cursor: pointer;
 }
 
-.datePicker{
+.datepicker {
     padding: 10px;
     margin: 10px 0;
 }
@@ -431,7 +460,7 @@ input:focus {
 }
 
 /*event page*/
-.location-box{
+.location-box {
     display: grid;
     grid-template-rows: 0.3fr 0.5fr 4fr 0.3fr;
     justify-content: end;
@@ -445,7 +474,7 @@ input:focus {
 }
 
 .show-address {
-    max-width:10vw;
+    max-width: 10vw;
 }
 
 
@@ -454,85 +483,100 @@ input:focus {
     text-align: center;
     text-decoration: none;
 }
+
 .directions-link:hover {
     color: #f35f5f;
 }
+
 .map-iframe {
     height: 50vh;
     border: 1px solid black;
     width: 15vw;
 }
+
 .boldWord {
     font-weight: bold;
 }
-.artist-details{
+
+.artist-details {
     width: 10vw;
-    float:left;
+    float: left;
     margin-right: 1vw;
 }
-.artist-pic{
+
+.artist-pic {
     width: 8vw;
     border-radius: 50%;
     display: inline;
 }
-.artist-name{
+
+.artist-name {
     float: right;
     margin-right: 5vw;
 }
-.artist-info-section{
+
+.artist-info-section {
     width: 53vw;
     display: inline-block;
 }
-.full-event-container{
+
+.full-event-container {
     margin-left: 10vw;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 2fr 2fr;
 }
-.trailer-photo{
-    width:100%;
+
+.trailer-photo {
+    width: 100%;
     box-shadow: 5px 5px 10px grey;
     margin-top: 5rem;
 }
-.trailer-buttons{
+
+.trailer-buttons {
     margin-top: 2vh;
     text-align: right;
 }
-.buy-button{
+
+.buy-button {
     margin-right: 2vw;
     background-color: #ce5858;
     color: white;
     height: 6vh;
 }
-.share-button{
-    margin-left:2vw;
-    margin-right:1vw;
+
+.share-button {
+    margin-left: 2vw;
+    margin-right: 1vw;
     background-color: #ce5858;
     color: white;
     height: 6vh;
 }
 
-.hide-show-button{
+.hide-show-button {
     background-color: #3c4b66;
     color: white;
 }
-.trailer-component{
+
+.trailer-component {
     margin-bottom: 3vh;
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start:1;
+    grid-row-start: 1;
     grid-row-end: 2;
 }
-.location-box{
+
+.location-box {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start:1;
+    grid-row-start: 1;
     grid-row-end: 1;
 }
-.information-section{
+
+.information-section {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start:2;
+    grid-row-start: 2;
     grid-row-end: 3;
     text-align: justify;
     padding: 1vh;
@@ -579,15 +623,11 @@ input:focus {
 }
 
 
-
-
-
-
-@media (max-width :1250px){
-    .map-iframe{
+@media (max-width: 1250px) {
+    .map-iframe {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start:1;
+        grid-row-start: 1;
         grid-row-end: 3;
         height: 60%;
         border: 1px solid black;
@@ -597,9 +637,9 @@ input:focus {
     }
 
     .location-headline {
-        grid-column-start:2;
-        grid-column-end:3;
-        grid-row-start:1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
         grid-row-end: 2;
         margin-top: 1vh;
         align-content: end;
@@ -609,12 +649,12 @@ input:focus {
     .show-address {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start:1;
+        grid-row-start: 1;
         grid-row-end: 2;
         max-width: 10vw;
     }
 
-    .location-box{
+    .location-box {
         margin-top: 0;
     }
 
@@ -629,29 +669,31 @@ input:focus {
         margin-bottom: 2vh;
 
     }
-    .location-box{
+
+    .location-box {
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start:2;
+        grid-row-start: 2;
         grid-row-end: 3;
 
     }
 
-    .directions-link{
+    .directions-link {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start:2;
+        grid-row-start: 2;
         grid-row-end: 3;
     }
 
-    .full-event-container{
+    .full-event-container {
         margin-left: 10vw;
         display: grid;
         grid-template-rows: 0.3fr 0.5fr 0.5fr;
 
 
     }
-    .trailer-component{
+
+    .trailer-component {
         height: 40%;
         margin-bottom: 0;
         grid-column-start: 1;
@@ -672,25 +714,26 @@ input:focus {
     }
 
 
-    .buy-button{
+    .buy-button {
         height: 4vh;
         font-size: 10px;
         margin-right: 2vw;
     }
-    .share-button{
+
+    .share-button {
         height: 4vh;
         font-size: 10px;
         margin-right: 5vw;
     }
 
-    .artist-details{
+    .artist-details {
         width: 30%;
-        float:left;
+        float: left;
 
     }
 
-    .artist-info-section{
-        width:65%;
+    .artist-info-section {
+        width: 65%;
 
     }
 }
@@ -702,13 +745,130 @@ input:focus {
     text-align: start;
     background-color: #E5DADA;
     color: #002642;
-    margin: 4rem 2rem;
     max-width: 22rem;
-    margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin: 5rem auto;
 }
 
+
+/**********BookingPage**********/
+
+
+.select-a-show-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #840032;
+    margin: 4.8rem 5rem;
+    border-radius: 10px;
+    padding: 1.5rem 2.2rem;
+    box-shadow: -2px -2px 6px #E5DADA, 1px 1px 2px #E5DADA;
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+}
+
+.choose-a-show-headline {
+    color: #002642;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3.8rem;
+}
+
+.drop-down-seat-button {
+    background-color: #E5DADA;
+    border: 1px solid #840032;
+    color: #840032;
+    margin-left: 3.5rem;
+    box-shadow: 1px 1px 2px #E5DADA;
+}
+
+.more-or-less-button {
+    background-color: #E5DADA;
+    border: 1px solid #840032;
+    color: #840032;
+    height: 40px;
+    width: 45px;
+    align-self: center;
+    padding: 0.5rem;
+    margin: -1.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.choose-number-of-seats {
+    color: #02040F;
+}
+
+.choose-number-of-tickets {
+    display: flex;
+    position: absolute;
+    border: 1px solid #840032;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: -4.4rem;
+    margin-top: 0.5rem;
+    box-shadow: -2px -2px 6px #E5DADA, 1px 1px 2px #E5DADA;
+}
+
+.seat-input {
+    border: 1px solid #E5DADA;
+    font-weight: lighter;
+    color: #02040F;
+    margin: 2rem 1rem;
+    width: 0.9rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.seat-paragraph {
+    align-self: center;
+    margin: -1rem 0.5rem 0.5rem 0.5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.submit-seats-button {
+    background-color: #840032;
+    border-radius: 10px;
+    color: white;
+    padding: 0.6rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.submit-seats-button:hover {
+    background-color: #E5DADA;
+    color: #02040F;
+    transition: background-color 1.5s, color 1s;
+    cursor: pointer;
+}
+
+.submit-seats-button:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.drop-down-seat-button:hover {
+    background-color: #840032;
+    border-color: white;
+    color: white;
+    transition: background-color 1.2s, color 1s, border-color 1s;
+    cursor: pointer;
+}
+
+.drop-down-seat-button:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.more-or-less-button:hover {
+    background-color: #840032;
+    border-color: white;
+    color: white;
+    transition: background-color 1.2s, color 1s, border-color 1s;
+    cursor: pointer;
+}
+
+.more-or-less-button:active {
+    transform: translateY(2px) translateX(2px);
+}
 
 .input-box {
     border: 1px solid black;
@@ -719,7 +879,7 @@ input:focus {
 
 /****************LogIn Page*****************/
 
-.login-form-container{
+.login-form-container {
     height: 50rem;
     width: 2000px;
     background-image: url('src/images/use2.jpg');
@@ -727,7 +887,7 @@ input:focus {
     background-size: cover;
 }
 
-.login-form{
+.login-form {
     width: 20%;
     display: flex;
     flex-direction: column;

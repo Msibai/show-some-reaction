@@ -1,44 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route,
+    RouterProvider,
 } from "react-router-dom";
-import Navbar from "./Navbar.jsx";
-import EventPage from "./EventPage.jsx";
-import Footer from "./Footer.jsx";
-import ErrorPage from "./ErrorPage.jsx";
-import BookingPage from "./BookingPage.jsx";
-import PaymentPage from "./PaymentPage.jsx";
-import Login from "./components/Login.jsx";
-import Register from "./Register.jsx";
+import EventPage from "./Components/EventPage.jsx";
+import ErrorPage from "./Components/ErrorPage.jsx";
+import BookingPage from "./Components/BookingPage.jsx";
+import SignIn from "./Components/SignIn.jsx";
+import SignUp from "./Components/SignUp.jsx";
+import Root from "./Components/Root.jsx";
+import Home from "./Components/Home.jsx";
+import PaymentPage from "./components/PaymentPage.jsx";
 
 
 const router = createBrowserRouter(
-  createRoutesFromElements([
-    <Route path="/" element={<App />} errorElement={<ErrorPage />} />,
-    <Route path="EventPage" element={<EventPage />} />,
+    createRoutesFromElements([
+        <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
+            <Route index element={<Home />} />
+            <Route path="eventpage" element={<EventPage />} />
+            <Route path="bookingpage" element={<BookingPage />} />
+            <Route path="login" element={<SignIn />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="paymentpage" element={<PaymentPage />} />
 
-      <Route path ="BookingPage" element={<BookingPage />}/>,
-      <Route path ="PaymentPage" element={<PaymentPage />}/>,
-
-
-      <Route path="Login" element={<Login />} />,
-    <Route path="BookingPage" element={<BookingPage />} />,
-    <Route path="Register" element={<Register />} />,
-      <Route path="PaymentPage" element={<PaymentPage />} />,
-
-  ])
+        </Route>,
+    ])
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Navbar />
-    <RouterProvider router={router} />
-    <Footer />
-  </React.StrictMode>
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 );
