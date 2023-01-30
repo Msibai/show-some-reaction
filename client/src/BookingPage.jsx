@@ -1,11 +1,14 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
+import SelectAShow from "./SelectAShow.jsx";
 
-function BookingPage(props) {
+export default function BookingPage({showData}) {
+
+
     return (
         <div>
-            <h1>Booking Page</h1>
+            <h2 className="choose-a-show-headline">Please select a show</h2>
+            < SelectAShow />
         </div>
     );
 }
-
-export default BookingPage;
