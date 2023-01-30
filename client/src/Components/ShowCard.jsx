@@ -63,7 +63,7 @@ function ShowCard({ showData }) {
                 </button>
               </h4>
               <div className="card-info">
-                <span className="card-description"> {curElem.description}</span>
+                <span className="card-description">{curElem.description}</span>
               </div>
             </div>
           </div>

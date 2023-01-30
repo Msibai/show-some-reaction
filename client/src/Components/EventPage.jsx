@@ -1,11 +1,16 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import AddressBox from "./AddressBox.jsx";
 
 export default function EventPage() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [isLess, setIsLess] = useState(false);
+
+  function goToBooking() {
+    navigate("/BookingPage");
+  }
 
   return (
     <div className="full-event-container">
@@ -15,7 +20,9 @@ export default function EventPage() {
         </div>
 
         <div className="trailer-buttons">
-          <button className="buy-button">Buy tickets</button>
+          <button className="buy-button" onClick={() => goToBooking()}>
+            Buy tickets
+          </button>
           <button className="share-button">Share event</button>
         </div>
       </div>
