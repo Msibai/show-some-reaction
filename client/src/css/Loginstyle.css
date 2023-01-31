@@ -3,9 +3,10 @@
 
 .login-form-container{
     text-align: center;
-    background-image: url('src/images/tryback.jpg');
+    background-color:#E5DADA;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .login-form{
@@ -13,6 +14,8 @@
     width: 20%;
     display: flex;
     flex-direction: column;
+    margin-top:1rem;
+
 }
 
 .login-logo{
@@ -25,7 +28,7 @@
     background-color: #840032 ;
     color: white;
     font-family: lato;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 
