@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 
 export const SignUp = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [country, setCountry] = useState("");
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const countryRef = useRef();
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
+    console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value, countryRef.current.value);
   };
 
   return (
     <div className="register-container">
       <div>
-        <form className="register-form" onSubmit={handleSubmit}>
+        <form className="register-form" onSubmit={onSubmit}>
           <h1>Sign up</h1>
           <label htmlFor="name">Full name:</label>
-          <input
-            className="input-box"
+          <input className="input-box"
+            ref={nameRef}
             type="text"
             id="name"
             placeholder="Firstname Lastname"
@@ -26,24 +26,24 @@ export const SignUp = () => {
           <label htmlFor="email">E-mail:</label>
           <input
             className="input-box"
+            ref={emailRef}
             type="email"
-            name="email"
             id="email"
             placeholder="E-mail"
           />
           <label htmlFor="password">Password:</label>
           <input
             className="input-box"
+            ref ={passwordRef}
             type="password"
-            name="password"
             id="password"
             placeholder="Password"
           />
           <label htmlFor="country">Country:</label>
           <input
             className="input-box"
+            ref ={countryRef}
             type="text"
-            name="country"
             id="country"
             placeholder="Country"
           />
