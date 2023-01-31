@@ -12,11 +12,12 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="register-container">
+    <div className={"signup-page-container"}>
+      <div className="register-container">
       <div>
         <form className="register-form" onSubmit={handleSubmit}>
-          <h1>Sign up</h1>
-          <label htmlFor="name">Full name:</label>
+          <h1 className={"signup-title"}>Sign up</h1>
+          <label className="full-name" htmlFor="name">Full name:</label>
           <input
             className="input-box"
             type="text"
@@ -50,6 +51,7 @@ export const SignUp = () => {
           <button className="register-btn">Register</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

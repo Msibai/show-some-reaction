@@ -5,6 +5,9 @@ import { Icon } from "react-icons-kit";
 import { eyeDisabled } from "react-icons-kit/ionicons/eyeDisabled";
 import { eye } from "react-icons-kit/ionicons/eye";
 
+
+
+
 function SignIn(props) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -40,7 +43,7 @@ function SignIn(props) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="youremail@gmail.com"
+            placeholder="your@email.com"
             id="email"
             name="email"
             className="email"
@@ -58,16 +61,20 @@ function SignIn(props) {
               name="password"
               className="password"
             />
+
             <span onClick={handleToggle}>
               <Icon icon={icon} size={20} />
             </span>
           </div>
+          <Link to={"/forgotpassword"} className="forgot-password-text">Forgot your password?</Link>
           <button className="login-button">Log In</button>
           <Link to={"/signup"} className="text-for-signup">
             {" "}
-            Don't have an account? Go to Sign Up
+            Don't have an account? Sign up here
           </Link>
         </form>
+
+
       </div>
     </>
   );
