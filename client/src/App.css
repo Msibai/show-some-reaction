@@ -895,6 +895,7 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .login-form {
@@ -958,13 +959,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .signup-title{
-    font-size:25px;
-
+    position:absolute;
+    left:47%;
+    top:20%;
+    font-size:30px;
+    color:black;
 }
 
 .full-name{
     padding-top:2rem;
+
 }
+
+
 
 /****************Forgot Password Page*****************/
 

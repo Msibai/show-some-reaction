@@ -12,17 +12,22 @@ export const SignUp = () => {
   };
 
   return (
-    <div className={"signup-page-container"}>
-      <div className="register-container">
+
+      <div className={"signup-page-container"}>
+
+        <div className="register-container">
+
       <div>
+        <h1 className={"signup-title"}>Sign up</h1>
+
         <form className="register-form" onSubmit={handleSubmit}>
-          <h1 className={"signup-title"}>Sign up</h1>
+
           <label className="full-name" htmlFor="name">Full name:</label>
           <input
             className="input-box"
             type="text"
             id="name"
-            placeholder="Firstname Lastname"
+            placeholder="John Doe"
           />
           <label htmlFor="email">E-mail:</label>
           <input
@@ -30,7 +35,7 @@ export const SignUp = () => {
             type="email"
             name="email"
             id="email"
-            placeholder="E-mail"
+            placeholder="your@email.com"
           />
           <label htmlFor="password">Password:</label>
           <input

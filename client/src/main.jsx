@@ -18,6 +18,7 @@ import PaymentPage from "./components/PaymentPage.jsx";
 import ForgotPasswordForm from "./Components/ForgotPasswordForm.jsx";
 
 
+
 const router = createBrowserRouter(
     createRoutesFromElements([
         <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
             <Route path="signup" element={<SignUp />} />
             <Route path="paymentpage" element={<PaymentPage />} />
             <Route path="forgotpassword" element={<ForgotPasswordForm />} />
+
 
         </Route>,
     ])
