@@ -745,8 +745,16 @@ input:focus {
     background-color: #E5DADA;
     color: #002642;
     max-width: 22rem;
-    margin: 5rem auto;
+    margin: 0rem auto;
 }
+
+.signup-page-container{
+    background-color:#E5DADA;
+    height: 50rem;
+    width: 100%;
+}
+
+
 
 
 
@@ -885,9 +893,9 @@ input[type=number]::-webkit-inner-spin-button {
 .login-form-container {
     height: 50rem;
     width: 100%;
-    background-image: url('src/images/use2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .login-form {
@@ -901,11 +909,17 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: #840032;
     color: white;
     margin: 2rem auto;
+    padding-right:3rem;
+    padding-left:3rem;
 }
 
 .register-form {
-    margin-left: 2rem;
+    margin-left:50%;
+    padding-top:5rem;
+
 }
+
+
 
 .pass-eye-div{
     height:30px;
@@ -919,22 +933,20 @@ input[type=number]::-webkit-inner-spin-button {
 .login-button:hover{
     background-color: rgba(10, 10, 10, 0.57);
     color: white;
-    transition: background-color 1s, border 0.5s;
-    border: 1px solid white;
+    transition: background-color 0.3s;
     cursor: pointer;
 }
 
 .register-btn:hover{
     background-color: rgba(10, 10, 10, 0.57);
     color: white;
-    transition: background-color 1s, border 0.5s;
-    border: 1px solid white;
+    transition: background-color 0.3s;
     cursor: pointer;
 }
 
 .text-for-signup:hover{
     animation-name:signUpHover;
-    animation-duration:0.3s;
+    animation-duration:0.2s;
     animation-fill-mode: forwards;
 
 
@@ -944,4 +956,70 @@ input[type=number]::-webkit-inner-spin-button {
     0%{color:black;}
     100%{color:red;}
 
+}
+
+.signup-title{
+    position:absolute;
+    left:47%;
+    top:20%;
+    font-size:30px;
+    color:black;
+}
+
+.full-name{
+    padding-top:2rem;
+
+}
+
+
+
+/****************Forgot Password Page*****************/
+
+.forgot-password-text{
+    font-size:15px;
+    padding-top:8px;
+}
+
+.forgot-password-text:hover{
+    animation-name:signUpHover;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+.forgot-password-container{
+    text-align: center;
+    background-color:#E5DADA;
+    height: 50rem;
+    width: 100%;
+}
+
+.forgot-password-title{
+    font-family: playfair;
+    font-size: 36px;
+    padding-top:7rem;
+}
+
+.forgot-password-intro{
+    font-size:20px;
+    padding-top:1rem;
+}
+
+.forgot-password-button{
+    display: flex;
+    background-color: #840032;
+    color: white;
+    margin: auto;
+    padding-right:4rem;
+    padding-left:4rem;
+
+}
+
+.forgot-password-button:hover{
+    background-color: rgba(10, 10, 10, 0.57);
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.email-label-forgot-password{
+    margin-top:1rem;
 }

@@ -15,6 +15,8 @@ import SignUp from "./Components/SignUp.jsx";
 import Root from "./Components/Root.jsx";
 import Home from "./Components/Home.jsx";
 import PaymentPage from "./components/PaymentPage.jsx";
+import ForgotPasswordForm from "./Components/ForgotPasswordForm.jsx";
+
 
 
 const router = createBrowserRouter(
@@ -26,6 +28,8 @@ const router = createBrowserRouter(
             <Route path="login" element={<SignIn />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="paymentpage" element={<PaymentPage />} />
+            <Route path="forgotpassword" element={<ForgotPasswordForm />} />
+
 
         </Route>,
     ])
