@@ -4,15 +4,15 @@ import { Outlet } from "react-router-dom";
 import {GlobalProvider} from "./GlobalContext.jsx";
 
 export default function Root() {
-  return (
-    <>
-    <GlobalProvider>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </GlobalProvider>
-    </>
-  );
+    return (
+        <>
+            <GlobalProvider>
+                <Header />
+                <main>
+                    <Outlet />
+                </main>
+                <Footer />
+            </GlobalProvider>
+        </>
+    );
 }

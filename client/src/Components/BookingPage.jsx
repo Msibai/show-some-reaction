@@ -1,5 +1,3 @@
-import React from 'react';
-import {useNavigate} from "react-router-dom";
 import SelectAShow from "./SelectAShow.jsx";
 
 export default function BookingPage({showData}) {

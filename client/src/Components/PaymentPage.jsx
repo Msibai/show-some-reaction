@@ -1,7 +1,6 @@
-import React from 'react';
 import "../css/PaymentPage.css";
 
-function PaymentPage(props) {
+export default function() {
     return (
 
         <div className="payment-page-component">
@@ -18,4 +17,3 @@ function PaymentPage(props) {
     );
 }
 
-export default PaymentPage;

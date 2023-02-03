@@ -169,11 +169,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /********** ShowCard **********/
-.main-card-container {
-    /*height: 5vh;*/
-    display: flex;
-    flex-direction: row;
-}
 
 .logo-footer {
     width: 10vw;
@@ -182,18 +177,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 3vh;
 }
 
-
 /********** ShowCard **********/
 
-.main-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2vw;
-    margin-bottom: 4vh;
-}
-
-.card-container {
+.card-container{
     width: 250px;
     padding: 10px;
     display: flex;
@@ -201,7 +187,17 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 
-.card-body {
+
+.main-event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 4vh;
+}
+
+
+.card .body {
     display: flex;
     flex-direction: column;
 }
@@ -459,7 +455,7 @@ input:focus {
 }
 
 /*event page*/
-.location-box {
+.venue-box {
     display: grid;
     grid-template-rows: 0.3fr 0.5fr 4fr 0.3fr;
     justify-content: end;
@@ -493,7 +489,7 @@ input:focus {
     width: 15vw;
 }
 
-.boldWord {
+.bold-word {
     font-weight: bold;
 }
 
@@ -565,7 +561,7 @@ input:focus {
     grid-row-end: 2;
 }
 
-.location-box {
+.venue-box {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -653,11 +649,11 @@ input:focus {
         max-width: 10vw;
     }
 
-    .location-box {
+    .venue-box {
         margin-top: 0;
     }
 
-    .location-box {
+    .venue-box {
         display: grid;
         grid-template-columns: 0.5fr 0.5fr;
         grid-template-rows: 0.5fr 0.5fr;
@@ -669,7 +665,7 @@ input:focus {
 
     }
 
-    .location-box {
+    .venue-box {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 2;

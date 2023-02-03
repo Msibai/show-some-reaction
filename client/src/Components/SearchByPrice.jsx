@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import showAPI from "../showAPI.jsx";
 
-export default function SearchByPrice(props) {
+export default function (props) {
   const [price, setPrice] = useState("");
-  const showList = Object.values(props.showData);
+  const showList = Object.values(props.filteredData);
   const rangeRef = useRef();
 
   const handleChange = (e) => {
@@ -10,7 +11,7 @@ export default function SearchByPrice(props) {
   };
 
   const handleReset = () => {
-    props.setFilteredData(null);
+    props.setFilteredData(showAPI);
     setPrice(null);
     rangeRef.current.value = 0;
   };
@@ -18,7 +19,7 @@ export default function SearchByPrice(props) {
   useEffect(() => {
     if (price) {
       props.setFilteredData(
-        showList.filter((show) => {
+        showAPI.filter((show) => {
           if (parseInt(show.price, 10) < parseInt(price, 10)) {
             return show;
           }
