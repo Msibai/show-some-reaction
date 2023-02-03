@@ -1,14 +1,15 @@
-import { useState } from "react";
+import  { useRef } from "react";
 
-export default function() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [country, setCountry] = useState("");
+export default function ()  {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const countryRef = useRef();
 
-  const handleSubmit = (e) => {
+
+  const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
+    console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value, countryRef.current.value);
   };
 
   return (
@@ -18,13 +19,12 @@ export default function() {
         <div className="register-container">
 
       <div>
-        <h1 className={"signup-title"}>Sign up</h1>
+        <form className="register-form" onSubmit={onSubmit}>
+          <h1>Sign up</h1>
+          <label htmlFor="name">Full name:</label>
+          <input className="input-box"
+            ref={nameRef}
 
-        <form className="register-form" onSubmit={handleSubmit}>
-
-          <label className="full-name" htmlFor="name">Full name:</label>
-          <input
-            className="input-box"
             type="text"
             id="name"
             placeholder="John Doe"
@@ -32,24 +32,24 @@ export default function() {
           <label htmlFor="email">E-mail:</label>
           <input
             className="input-box"
+            ref={emailRef}
             type="email"
-            name="email"
             id="email"
             placeholder="your@email.com"
           />
           <label htmlFor="password">Password:</label>
           <input
             className="input-box"
+            ref ={passwordRef}
             type="password"
-            name="password"
             id="password"
             placeholder="Password"
           />
           <label htmlFor="country">Country:</label>
           <input
             className="input-box"
+            ref ={countryRef}
             type="text"
-            name="country"
             id="country"
             placeholder="Country"
           />
