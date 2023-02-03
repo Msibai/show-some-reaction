@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import showAPI from "../showAPI.jsx";
 
-export default function searchByName(props) {
+export default function (props) {
   const [query, setQuery] = useState(null);
-  const showList = Object.values(props.showData);
+  const showList = Object.values(props.filteredData);
 
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -13,7 +14,7 @@ export default function searchByName(props) {
       props.setFilteredData(null);
     } else if (query) {
       props.setFilteredData(
-        showList.filter((show) => {
+        showAPI.filter((show) => {
           if (show.name.toLowerCase().includes(query.toLowerCase())) {
             return show;
           }

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function SelectNumberOfTickets() {
+export default function () {
     const [seats, setSeats] = useState(2);
 
     function NumberOfSeats() {

@@ -8,7 +8,7 @@ import { eye } from "react-icons-kit/ionicons/eye";
 
 
 
-function SignIn(props) {
+export default function() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [type, setType] = useState("password");
@@ -69,7 +69,7 @@ function SignIn(props) {
           <Link to={"/forgotpassword"} className="forgot-password-text">Forgot your password?</Link>
           <button className="login-button">Log In</button>
           <Link to={"/signup"} className="text-for-signup">
-            {" "}
+
             Don't have an account? Sign up here
           </Link>
         </form>
@@ -79,5 +79,3 @@ function SignIn(props) {
     </>
   );
 }
-
-export default SignIn;

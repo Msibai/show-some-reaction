@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 
-export const SignUp = () => {
+export default function ()  {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const countryRef = useRef();
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -59,5 +60,3 @@ export const SignUp = () => {
     </div>
   );
 };
-
-export default SignUp;

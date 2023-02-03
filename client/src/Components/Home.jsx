@@ -1,37 +1,30 @@
 import "../App.css";
-import React, { useState } from "react";
-import ShowAPI from "../showAPI.jsx";
+import { useState } from "react";
 import Filter from "./Filter.jsx";
-import ShowCard from "./ShowCard.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
+import showAPI from "../showAPI.jsx";
+import EventList from "./EventList.jsx";
 
-function Home() {
-  const [showData, setShowData] = useState(ShowAPI);
-  const [filteredData, setFilteredData] = useState(null);
+export default function () {
+  const [filteredData, setFilteredData] = useState(showAPI);
 
   return (
     <div className="home-main-wrapper">
       <div className="search-wrapper">
         <Filter
-          showData={showData}
-          setShowData={setShowData}
-          setFilteredData={setFilteredData}
+            filteredData={filteredData}
+            setFilteredData={setFilteredData}
         />
       </div>
       <div className="show-wrapper">
         <DropDownSearch
-          showData={showData}
-          setShowData={setShowData}
+          filteredData={filteredData}
           setFilteredData={setFilteredData}
         />
       </div>
-      {filteredData ? (
-        <ShowCard showData={filteredData} />
-      ) : (
-        <ShowCard showData={showData} />
-      )}
+      <EventList filteredData={filteredData}/>
     </div>
   );
 }
 
-export default Home;
+
