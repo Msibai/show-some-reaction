@@ -4,13 +4,13 @@ import "../css/header.css";
 import { useState } from "react";
 import Navbar from "./Navbar.jsx";
 
-export default function Header() {
+export default function () {
   const [toggle, setToggle] = useState(false);
   return (
     <>
       <header>
-        <div className="container header-container">
-          <div className="logo-container">
+        <div className="header-container">
+          <div>
             <Link to="/">
               <img className="header-logo" src={logo} alt="logo" />
             </Link>

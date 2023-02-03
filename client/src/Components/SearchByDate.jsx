@@ -1,24 +1,25 @@
 import { useRef } from "react";
+import showAPI from "../showAPI.jsx";
 
-export default function SearchByDate(props) {
-  const showList = Object.values(props.showData);
+export default function (props) {
+  const showList = Object.values(props.filteredData);
   const fromRef = useRef(null);
   const toRef = useRef(null);
 
   const sortByDate = () => {
-    props.setShowData(
+    props.setFilteredData(
       showList.sort((a, b) => new Date(a.date) - new Date(b.date))
     );
   };
 
   const getAllShow = () => {
-    props.setFilteredData(null);
+    props.setFilteredData(showAPI);
   };
 
   const getTodaysShow = () => {
     const today = new Date().toDateString();
     props.setFilteredData(
-      showList.filter((show) => {
+      showAPI.filter((show) => {
         if (new Date(show.date).toDateString() === today) {
           return show;
         }

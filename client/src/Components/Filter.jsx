@@ -6,16 +6,15 @@ export default function Filter(props) {
   return (
     <div className="filter">
       <SearchByName
-        showData={props.showData}
+        filteredData={props.filteredData}
         setFilteredData={props.setFilteredData}
       />
       <SearchByPrice
-        showData={props.showData}
+        filteredData={props.filteredData}
         setFilteredData={props.setFilteredData}
       />
       <SearchByDate
-        showData={props.showData}
-        setShowData={props.setShowData}
+        filteredData={props.filteredData}
         setFilteredData={props.setFilteredData}
       />
     </div>

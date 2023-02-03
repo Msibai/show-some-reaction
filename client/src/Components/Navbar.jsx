@@ -1,7 +1,7 @@
 import "../App.css";
 import { NavLink } from "react-router-dom";
 
-const Navbar = (props) => {
+export default function (props) {
   return (
     <nav>
       <ul className={props.toggle ? "menu-items show" : "menu-items"}>
@@ -37,4 +37,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+
