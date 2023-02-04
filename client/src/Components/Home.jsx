@@ -1,9 +1,10 @@
-import "../App.css";
+import "../css/app.css";
 import { useState } from "react";
 import Filter from "./Filter.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
 import showAPI from "../showAPI.jsx";
 import EventList from "./EventList.jsx";
+
 
 export default function () {
   const [filteredData, setFilteredData] = useState(showAPI);

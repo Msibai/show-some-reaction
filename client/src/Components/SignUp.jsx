@@ -1,4 +1,5 @@
 import  { useRef } from "react";
+import "../css/signuppage.css"
 
 export default function ()  {
   const nameRef = useRef();

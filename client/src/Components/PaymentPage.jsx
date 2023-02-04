@@ -1,4 +1,4 @@
-import "../css/PaymentPage.css";
+import "../css/paymentpage.css";
 
 export default function() {
     return (

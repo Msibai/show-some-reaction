@@ -1,6 +1,5 @@
 header {
     height: 140px;
-    color: white;
     background-color: var(--black);
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
 }
@@ -31,6 +30,7 @@ header {
     animation-name:titleFade;
     animation-duration:2s;
     animation-fill-mode:forwards;
+    color:white;
 }
 
 @keyframes titleFade{
@@ -71,7 +71,6 @@ nav .menu-items {
     border-bottom: 3px solid var(--red);
     transition: border .5s;
 }
-
 
 @media screen and (max-width: 960px) {
     .header-container {
@@ -178,4 +177,32 @@ nav .menu-items {
         display: none;
     }
 
+}
+@keyframes logoHover {
+    0% {
+        opacity: 100%
+    }
+    100% {
+        opacity: 60%
+    }
+}
+
+.header-logo:hover {
+    cursor: pointer;
+    animation-name: logoHover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.navigationBar {
+    display: flex;
+    background-color: #232323;
+    width: 100%;
+    height: 12rem;
+    font-family: "Bernard MT Condensed", sans-serif;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-around;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
 }
