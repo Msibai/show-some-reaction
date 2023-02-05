@@ -1,4 +1,5 @@
 import SelectAShow from "./SelectAShow.jsx";
+import "../css/bookingpage.css"
 
 export default function BookingPage({showData}) {
 

@@ -1,0 +1,49 @@
+.register-btn {
+    display: flex; /*GOES IN SIGNUP*/
+    background-color: #840032;
+    color: white;
+    margin: 2rem auto;
+    padding-right:3rem;
+    padding-left:3rem;
+}
+
+.register-form {
+    margin-left:50%;
+    padding-top:5rem;
+}
+
+.pass-eye-div{
+    height:30px;
+    width:300px;
+}
+
+.register-btn:hover{
+    background-color: rgba(10, 10, 10, 0.57);
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.text-for-signup:hover{
+    animation-name:signUpHover;
+    animation-duration:0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes signUpHover{
+    0%{color:black;}
+    100%{color:red;}
+
+}
+
+.signup-title{
+    position:absolute;
+    left:47%;
+    top:20%;
+    font-size:30px;
+    color:black;
+}
+
+.full-name{
+    padding-top:2rem;
+}

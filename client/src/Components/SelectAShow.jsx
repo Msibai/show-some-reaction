@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SelectNumberOfTickets from "./SelectNumberOfTickets.jsx";
+import"../css/app.css"
 
 export default function () {
   const [numberOfTickets, setNumberOfTickets] = useState(false);

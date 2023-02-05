@@ -1,3 +1,5 @@
+import "../css/eventpage.css"
+
 export default function () {
     return (
             <div className='venue-box'>

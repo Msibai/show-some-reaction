@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import showAPI from "../showAPI.jsx";
+import"../css/app.css"
 
 export default function (props) {
   const [price, setPrice] = useState("");

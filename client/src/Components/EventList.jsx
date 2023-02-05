@@ -1,5 +1,6 @@
-import "../App.css";
+import "../css/app.css";
 import {Link} from "react-router-dom";
+import "../css/showcard.css"
 
 export default function EventList({filteredData}) {
     return (<section className="main-event-container">
