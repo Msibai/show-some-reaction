@@ -1,25 +1,25 @@
-import { useRef } from "react";
-import showAPI from "../showAPI.jsx";
+import { useContext, useRef } from "react";
+import globalContext from "../context/GlobalContext.jsx";
 
 export default function (props) {
-  const showList = Object.values(props.filteredData);
+  const { showList } = useContext(globalContext);
   const fromRef = useRef(null);
   const toRef = useRef(null);
 
   const sortByDate = () => {
     props.setFilteredData(
-      showList.sort((a, b) => new Date(a.date) - new Date(b.date))
+      props.filteredData.sort((a, b) => new Date(a.date) - new Date(b.date))
     );
   };
 
   const getAllShow = () => {
-    props.setFilteredData(showAPI);
+    props.setFilteredData(showList);
   };
 
   const getTodaysShow = () => {
     const today = new Date().toDateString();
     props.setFilteredData(
-      showAPI.filter((show) => {
+      showList.filter((show) => {
         if (new Date(show.date).toDateString() === today) {
           return show;
         }
@@ -48,7 +48,7 @@ export default function (props) {
   function handleReset() {
     fromRef.current.value = null;
     toRef.current.value = null;
-    props.setFilteredData(null);
+    props.setFilteredData(showList);
   }
 
   return (
