@@ -11,7 +11,7 @@ export default function () {
   const location = useLocation();
   const navigate = useNavigate();
   const event = filteredData.find(
-    (event) => event.id === parseInt(useParams().id)
+    (event) => event.name === (useParams().name)
   );
 
   console.log(event);
