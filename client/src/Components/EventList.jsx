@@ -11,7 +11,7 @@ export default function EventList({ filteredData }) {
 
   function EventCards() {
     return filteredData.map((show) => (
-      <EventCard key={show.id} details={show} />
+      <EventCard key={show.name} details={show} />
     ));
   }
 
@@ -20,7 +20,7 @@ export default function EventList({ filteredData }) {
       <div className="card-container">
         <div className="body">
           <h2 className="card-title">{details.name}</h2>
-          <Link to={`${details.id}`}>
+          <Link to={`${details.name}`}>
             <img src={details.image} alt="event image" className="card-image" />
           </Link>
         </div>
