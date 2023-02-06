@@ -1,15 +1,24 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import VenueLocationBox from "./VenueLocationBox.jsx";
 import showAPI from "../showAPI.jsx";
-
+import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
-  const [filteredData, setFilteredData] = useState(showAPI)
+  const data = useContext(globalContext);
+  const showList = data.showList;
+  const [filteredData, setFilteredData] = useState(showList);
   const location = useLocation();
   const navigate = useNavigate();
-  const event = filteredData.find(event=> event.id === parseInt(useParams().id))
+  const event = filteredData.find(
+    (event) => event.id === parseInt(useParams().id)
+  );
+
+  console.log(event);
+
   const [isLess, setIsLess] = useState(false);
+
+  console.log(event);
 
   function goToBooking() {
     navigate("/BookingPage");

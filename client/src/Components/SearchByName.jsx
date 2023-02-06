@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import showAPI from "../showAPI.jsx";
-import"../css/app.css"
+import "../css/app.css";
 
 export default function (props) {
   const [query, setQuery] = useState(null);
@@ -12,7 +12,7 @@ export default function (props) {
 
   useEffect(() => {
     if (query === "") {
-      props.setFilteredData(null);
+      props.setFilteredData(showAPI);
     } else if (query) {
       props.setFilteredData(
         showAPI.filter((show) => {
