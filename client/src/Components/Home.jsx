@@ -10,6 +10,10 @@ export default function () {
   const showList = data.showList;
   const [filteredData, setFilteredData] = useState(showList);
 
+  useEffect(() => {
+    setFilteredData(showList);
+  }, [showList]);
+
   return (
     <div className="home-main-wrapper">
       <div className="search-wrapper">
