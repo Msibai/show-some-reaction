@@ -6,14 +6,15 @@ import EventList from "./EventList.jsx";
 import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
-  const {showList} = useContext(globalContext);
-  const [filteredData, setFilteredData] = useState(showList);
+    const {showList} = useContext(globalContext);
+    const [filteredData, setFilteredData] = useState(showList);
+    const unique = [...new Map(filteredData.map((show) => [show["name"], show])).values()];
 
-  const unique = []
 
-  useEffect( () => {
+    useEffect( () => {
       setFilteredData(showList)
-  }, [showList])
+  } , [showList]);
+
 
   return (
     <div className="home-main-wrapper">
@@ -26,7 +27,10 @@ export default function () {
           setFilteredData={setFilteredData}
         />
       </div>
+
       <EventList unique={unique} />
+
     </div>
+
   );
 }

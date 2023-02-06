@@ -1,16 +1,20 @@
 import "../css/app.css";
 import { Link } from "react-router-dom";
 import "../css/showcard.css";
+import globalContext from "../context/GlobalContext.jsx";
+import {useContext} from "react";
 
-export default function EventList({ filteredData }) {
-  return (
+export default function EventList(props) {
+
+    return (
     <section className="main-event-container">
       <EventCards />
     </section>
   );
 
   function EventCards() {
-    return filteredData.map((show) => (
+
+    return props.unique.map((show) => (
       <EventCard key={show.name} details={show} />
     ));
   }
