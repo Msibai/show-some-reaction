@@ -1,21 +1,19 @@
 import "../css/app.css";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Filter from "./Filter.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";
-import showAPI from "../showAPI.jsx";
 import EventList from "./EventList.jsx";
-
+import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
-  const [filteredData, setFilteredData] = useState(showAPI);
+  const data = useContext(globalContext);
+  const showList = data.showList;
+  const [filteredData, setFilteredData] = useState(showList);
 
   return (
     <div className="home-main-wrapper">
       <div className="search-wrapper">
-        <Filter
-            filteredData={filteredData}
-            setFilteredData={setFilteredData}
-        />
+        <Filter filteredData={filteredData} setFilteredData={setFilteredData} />
       </div>
       <div className="show-wrapper">
         <DropDownSearch
@@ -23,9 +21,7 @@ export default function () {
           setFilteredData={setFilteredData}
         />
       </div>
-      <EventList filteredData={filteredData}/>
+      <EventList filteredData={filteredData} />
     </div>
   );
 }
-
-

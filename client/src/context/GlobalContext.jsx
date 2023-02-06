@@ -6,7 +6,7 @@ export const GlobalProvider = ({ children }) => {
 
     // useState for all variables
     const [auth, setAuth] = useState({loggedIn:false})
-    const [tidbits, setTidbits] = useState([])
+    const [showList, setShowList] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
     // useEffect to run methods upon load
@@ -20,9 +20,9 @@ export const GlobalProvider = ({ children }) => {
     const checkAuth = async () => {
         setIsLoading(true)
         const response = await fetch("/rest/login")
-        console.log('loading auth')
+        // console.log('loading auth')
         const result = await response.json()
-        console.log('auth state: ', result)
+        // console.log('auth state: ', result)
         setAuth(result)
         setIsLoading(false)
     }
@@ -35,7 +35,7 @@ export const GlobalProvider = ({ children }) => {
             body: JSON.stringify({email, password})
         })
         const result = await response.json()
-        console.log(result)
+        // console.log(result)
         setIsLoading(false)
         void checkAuth()
     }
@@ -46,17 +46,17 @@ export const GlobalProvider = ({ children }) => {
             method: "delete"
         })
         const result = await response.json()
-        console.log(result)
+        // console.log(result)
         setIsLoading(false)
         setAuth({loggedIn:false})
     }
 
     const loadTidbits = async () => {
         setIsLoading(true)
-        const response = await fetch("/rest/tidbits")
+        const response = await fetch("/rest/reaction")
         const result = await response.json()
-        console.log(result)
-        setTidbits(result)
+        // console.log(result)
+        setShowList(result)
         setIsLoading(false)
     }
 
@@ -64,7 +64,7 @@ export const GlobalProvider = ({ children }) => {
         <GlobalContext.Provider
             value={{
                 auth,
-                tidbits,
+                showList,
                 isLoading,
                 submitLogin,
                 logout
