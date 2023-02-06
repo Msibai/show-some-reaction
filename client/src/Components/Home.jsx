@@ -6,9 +6,16 @@ import EventList from "./EventList.jsx";
 import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
-  const data = useContext(globalContext);
-  const showList = data.showList;
+  const { showList } = useContext(globalContext);
+
   const [filteredData, setFilteredData] = useState(showList);
+  const unique = [
+    ...new Map(filteredData.map((show) => [show["name"], show])).values(),
+  ];
+
+  useEffect(() => {
+    setFilteredData(showList);
+  }, [showList]);
 
   useEffect(() => {
     setFilteredData(showList);
@@ -17,7 +24,7 @@ export default function () {
   return (
     <div className="home-main-wrapper">
       <div className="search-wrapper">
-        <Filter filteredData={filteredData} setFilteredData={setFilteredData} />
+        <Filter filteredData={unique} setFilteredData={setFilteredData} />
       </div>
       <div className="show-wrapper">
         <DropDownSearch
@@ -25,7 +32,7 @@ export default function () {
           setFilteredData={setFilteredData}
         />
       </div>
-      <EventList filteredData={filteredData} />
+      <EventList unique={unique} />
     </div>
   );
 }

@@ -25,14 +25,12 @@ const router = createBrowserRouter(
         <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
             <Route index element={<Home />} />
             <Route path="eventlist" element={<EventList />} />
-            <Route path=":id" element={<Event/>} />
-
+            <Route path=":name" element={<Event/>} />
             <Route path="bookingpage" element={<BookingPage />} />
             <Route path="login" element={<SignIn />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="paymentpage" element={<PaymentPage />} />
             <Route path="forgotpassword" element={<ForgotPasswordForm />} />
-
 
         </Route>,
     ])

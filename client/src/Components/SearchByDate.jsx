@@ -7,9 +7,9 @@ export default function (props) {
   const toRef = useRef(null);
 
   const sortByDate = () => {
-    props.setFilteredData([
-      ...props.filteredData.sort((a, b) => new Date(a.date) - new Date(b.date)),
-    ]);
+    props.setFilteredData(
+      props.filteredData.sort((a, b) => new Date(a.date) - new Date(b.date))
+    );
   };
 
   const getAllShow = () => {
