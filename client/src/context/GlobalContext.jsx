@@ -11,8 +11,8 @@ export const GlobalProvider = ({ children }) => {
 
     // useEffect to run methods upon load
     useEffect(() => {
-        void checkAuth()
         void loadTidbits()
+        void checkAuth()
     }, []);
 
     // methods, could be for on load, or just called from elsewhere
@@ -26,6 +26,18 @@ export const GlobalProvider = ({ children }) => {
         setAuth(result)
         setIsLoading(false)
     }
+    const register = async (email, password) => {
+        setIsLoading(true)
+        const response = await fetch("/rest/users", {
+            method: "post",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({email, password })
+        })
+        const result = await response.json()
+        console.log(result)
+        setIsLoading(false)
+        void checkAuth()
+    }
 
     const submitLogin = async (email, password) => {
         setIsLoading(true)
@@ -35,7 +47,7 @@ export const GlobalProvider = ({ children }) => {
             body: JSON.stringify({email, password})
         })
         const result = await response.json()
-        // console.log(result)
+        console.log( result)
         setIsLoading(false)
         void checkAuth()
     }
@@ -55,7 +67,7 @@ export const GlobalProvider = ({ children }) => {
         setIsLoading(true)
         const response = await fetch("/rest/reaction")
         const result = await response.json()
-        // console.log(result)
+        console.log(result)
         setShowList(result)
         setIsLoading(false)
     }
@@ -67,7 +79,8 @@ export const GlobalProvider = ({ children }) => {
                 showList,
                 isLoading,
                 submitLogin,
-                logout
+                logout,
+                register
             }}
         >
             {children}

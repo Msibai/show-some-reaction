@@ -22,7 +22,7 @@ import EventList from "./Components/EventList.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements([
-        <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
+        <Route path="/" element={<Root />} >
             <Route index element={<Home />} />
             <Route path="eventlist" element={<EventList />} />
             <Route path=":name" element={<Event/>} />

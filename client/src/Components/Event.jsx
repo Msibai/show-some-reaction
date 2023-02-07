@@ -1,18 +1,17 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import VenueLocationBox from "./VenueLocationBox.jsx";
-import showAPI from "../showAPI.jsx";
 import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
-  const data = useContext(globalContext);
-  const showList = data.showList;
+  console.log(useParams().name)
+  const {showList, isLoading} = useContext(globalContext);
+  if (isLoading || !showList) return null
+  console.log(isLoading)
+  console.table(showList)
   const [filteredData, setFilteredData] = useState(showList);
-  const location = useLocation();
   const navigate = useNavigate();
-  const event = filteredData.find(
-    (event) => event.name === (useParams().name)
-  );
+  const event = filteredData.find(event => event?.name === useParams()?.name)
 
   console.log(event);
 

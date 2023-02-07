@@ -7,17 +7,15 @@ import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
     const {showList} = useContext(globalContext);
+    useEffect( () => {
+        setFilteredData(showList)
+    } , [showList]);
 
-  const [filteredData, setFilteredData] = useState(showList);
+
+    const [filteredData, setFilteredData] = useState(showList);
+
     const unique = [...new Map(filteredData.map((show) => [show["name"], show])).values()];
 
-
-
-
-
-    useEffect( () => {
-      setFilteredData(showList)
-  } , [showList]);
 
   return (
     <div className="home-main-wrapper">
