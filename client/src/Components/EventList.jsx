@@ -1,8 +1,6 @@
 import "../css/app.css";
 import { Link } from "react-router-dom";
-import "../css/showcard.css";
-import globalContext from "../context/GlobalContext.jsx";
-import { useContext } from "react";
+import "../css/eventList.css";
 
 export default function EventList(props) {
   return (
@@ -28,7 +26,7 @@ export default function EventList(props) {
         </div>
         <div>
           <h2 className="show-date">{details.date}</h2>
-          <Link to={"bookingpage"} state={{ data: details.name }}>
+          <Link to={"eventselection"} state={{ data: details.name }}>
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
         </div>
