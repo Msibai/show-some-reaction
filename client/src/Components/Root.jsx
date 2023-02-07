@@ -6,7 +6,6 @@ import { ShoppingCartProvider } from "../context/ShoppingCartContext.jsx";
 
 export default function Root() {
   return (
-    <>
       <GlobalProvider>
         <ShoppingCartProvider>
           <Header />
@@ -16,6 +15,5 @@ export default function Root() {
           <Footer />
         </ShoppingCartProvider>
       </GlobalProvider>
-    </>
   );
 }

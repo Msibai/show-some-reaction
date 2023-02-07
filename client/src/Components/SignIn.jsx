@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import "../css/signinpage.css";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { Icon } from "react-icons-kit";
 import { eyeDisabled } from "react-icons-kit/ionicons/eyeDisabled";
 import { eye } from "react-icons-kit/ionicons/eye";
+import GlobalContext from "../context/GlobalContext.jsx";
 
 
 
 
 export default function() {
+  const { submitLogin } = useContext(GlobalContext);
+
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [type, setType] = useState("password");
@@ -16,8 +19,8 @@ export default function() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(pass);
+    submitLogin(email, pass);
+
   };
 
   const handleToggle = () => {
