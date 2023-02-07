@@ -3,9 +3,13 @@ import logo from "../images/logo.jpg";
 import "../css/header.css";
 import { useState } from "react";
 import Navbar from "./Navbar.jsx";
+import { FaShoppingCart } from "react-icons/fa";
+import { useShoppingCart } from "../context/ShoppingCartContext.jsx";
 
 export default function () {
   const [toggle, setToggle] = useState(false);
+  const { openCart, cartQuantity } = useShoppingCart();
+
   return (
     <>
       <header>
@@ -26,7 +30,17 @@ export default function () {
             <span className="line line2"></span>
             <span className="line line3"></span>
           </div>
-          <Navbar toggle={toggle} setToggle={setToggle} />
+          <div>
+            <Navbar toggle={toggle} setToggle={setToggle} />
+            <Link to="cart">
+              <div className="cart-button">
+                <button onClick={openCart}>
+                  <FaShoppingCart />
+                  <div>{cartQuantity}</div>
+                </button>
+              </div>
+            </Link>
+          </div>
         </div>
       </header>
     </>
