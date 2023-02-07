@@ -19,6 +19,9 @@ export default function (props) {
           if (show.name.toLowerCase().includes(query.toLowerCase())) {
             return show;
           }
+          else {
+            return null;
+          }
         })
       );
     }

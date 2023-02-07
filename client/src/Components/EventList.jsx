@@ -5,9 +5,18 @@ import globalContext from "../context/GlobalContext.jsx";
 import { useContext } from "react";
 
 export default function EventList(props) {
+    let len = props.unique.length;
   return (
     <section className="main-event-container">
+        {
+            (len === 0 ) ?
+                <div className="no-data-found"> No event for your selected criteria available. <span> <button className="view-all"> All shows  </button> </span>  </div>
+                :
+
       <EventCards />
+
+
+        }
     </section>
   );
 
