@@ -1,16 +1,15 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "../css/footer.css"
+import "../css/footer.css";
 
 export default function () {
-
   return (
     <>
       <footer className="footer">
         <nav>
-          <a href="src#" className="footer-logo">
+          <Link to="/">
             <img className="logo-footer" alt="logo" src="src/images/logo.jpg" />
-          </a>
+          </Link>
           <p className="copyright">
             Copyright &copy; <span className="year">2023</span> by Show some
             REACTion
@@ -69,4 +68,4 @@ export default function () {
       </footer>
     </>
   );
-};
+}

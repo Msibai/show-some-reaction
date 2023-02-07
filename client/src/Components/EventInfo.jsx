@@ -26,7 +26,7 @@ export default function () {
         </div>
 
         <div className="trailer-buttons">
-          <Link to={"/bookingpage"} state={{ data: selectedShow.name }}>
+          <Link to={"/eventselection"} state={{ data: selectedShow.name }}>
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
           <button className="share-button">Share event</button>
