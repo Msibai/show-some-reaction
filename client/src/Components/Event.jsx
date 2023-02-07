@@ -1,28 +1,14 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import VenueLocationBox from "./VenueLocationBox.jsx";
-import showAPI from "../showAPI.jsx";
 import globalContext from "../context/GlobalContext.jsx";
 
 export default function () {
   const data = useContext(globalContext);
   const showList = data.showList;
   const [filteredData, setFilteredData] = useState(showList);
-  const location = useLocation();
-  const navigate = useNavigate();
-  const event = filteredData.find(
-    (event) => event.name === (useParams().name)
-  );
-
-  console.log(event);
-
+  const event = filteredData.find((event) => event.name === useParams().name);
   const [isLess, setIsLess] = useState(false);
-
-  console.log(event);
-
-  function goToBooking() {
-    navigate("/BookingPage");
-  }
 
   return (
     <div className="full-event-container">
@@ -32,9 +18,9 @@ export default function () {
         </div>
 
         <div className="trailer-buttons">
-          <button className="buy-button" onClick={() => goToBooking()}>
-            Buy tickets
-          </button>
+          <Link to={"/bookingpage"} state={{ data: event.name }}>
+            <button className="buy-tickets">Buy Tickets</button>
+          </Link>
           <button className="share-button">Share event</button>
         </div>
       </div>

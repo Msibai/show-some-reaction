@@ -17,10 +17,6 @@ export default function () {
     setFilteredData(showList);
   }, [showList]);
 
-  useEffect(() => {
-    setFilteredData(showList);
-  }, [showList]);
-
   return (
     <div className="home-main-wrapper">
       <div className="search-wrapper">
