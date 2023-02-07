@@ -1,0 +1,12 @@
+.cart-item {
+    display: flex;
+}
+
+.cart-item img {
+    width: 70px;
+}
+
+.cart-item .info {
+    text-align: left;
+    padding: 10px;
+}
