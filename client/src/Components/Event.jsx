@@ -54,7 +54,6 @@ export default function () {
           type="button"
           onClick={() => setIsLess(!isLess)}
         >
-          {" "}
           {isLess === false ? "More about Artist" : "Hide"}
         </button>
         {isLess && (

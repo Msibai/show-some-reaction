@@ -26,10 +26,7 @@ const router = createBrowserRouter(
             <Route index element={<Home />} />
             <Route path="eventlist" element={<EventList />} />
             <Route path=":name" element={<Event/>} />
-<<<<<<< HEAD
 
-=======
->>>>>>> ca25c00ff22100ceaa730b1e6adbc283b4613dc3
             <Route path="bookingpage" element={<BookingPage />} />
             <Route path="login" element={<SignIn />} />
             <Route path="signup" element={<SignUp />} />

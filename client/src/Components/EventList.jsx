@@ -29,7 +29,6 @@ export default function EventList(props) {
           </Link>
         </div>
         <div>
-          <h2 className="show-date">{details.date}</h2>
           <Link to={"/ArtistEventsPage"}>
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
