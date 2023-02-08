@@ -1,5 +1,4 @@
 import "../css/bookingCard.css";
-import { useState } from "react";
 import { useShoppingCart } from "../context/ShoppingCartContext.jsx";
 import { formatCurrency } from "../utilities/formatCurrency.js";
 
