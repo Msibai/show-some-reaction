@@ -11,7 +11,7 @@ export default function EventList(props) {
     <section className="main-event-container">
         {
             (len === 0 ) ?
-                <div className="no-data-found"> No event for your selected criteria available. <button onClick= { ()=> { props.setFilteredData(showList)}} > Go Back  </button> </div>
+                <div className="no-data-found"> <p>No event for your selected criteria available.</p> <button onClick= { ()=> { props.setFilteredData(showList)}}> All shows </button> </div>
                 :
 
       <EventCards />
@@ -31,18 +31,16 @@ export default function EventList(props) {
     return (
       <div className="card-container">
         <div className="body">
-          <h2 className="card-title">{details.name}</h2>
+          <h2>{details.name}</h2>
           <Link to={`${details.name}`}>
             <img src={details.image} alt="event image" className="card-image" />
           </Link>
         </div>
-        <div>
-          <h2 className="show-date">Opening: {details.date}</h2>
+          <p>Opening: {details.date}</p>
           <Link to={"eventselection"} state={{ data: details.name }}>
 
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
-        </div>
       </div>
     );
   }
