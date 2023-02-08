@@ -18,6 +18,8 @@ export default function (props) {
         showList.filter((show) => {
           if (show.name.toLowerCase().includes(query.toLowerCase())) {
             return show;
+          } else {
+            return null;
           }
         })
       );

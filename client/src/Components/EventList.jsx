@@ -1,11 +1,23 @@
 import "../css/app.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import globalContext from "../context/GlobalContext.jsx";
+import { useContext } from "react";
 import "../css/eventList.css";
 
 export default function EventList(props) {
+    const {showList} = useContext(globalContext);
+    let len = props.unique.length;
   return (
     <section className="main-event-container">
+        {
+            (len === 0 ) ?
+                <div className="no-data-found"> No event for your selected criteria available. <button onClick= { ()=> { props.setFilteredData(showList)}} > Go Back  </button> </div>
+                :
+
       <EventCards />
+
+
+        }
     </section>
   );
 
@@ -25,13 +37,11 @@ export default function EventList(props) {
           </Link>
         </div>
         <div>
-          <h2 className="show-date">{details.date}</h2>
+          <h2 className="show-date">Opening: {details.date}</h2>
           <Link to={"eventselection"} state={{ data: details.name }}>
+
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
-        </div>
-        <div className="info">
-          <span className="card-description">{details.description}</span>
         </div>
       </div>
     );
