@@ -1,19 +1,15 @@
 import "../css/app.css";
 import { Link } from "react-router-dom";
-import "../css/showcard.css";
-import globalContext from "../context/GlobalContext.jsx";
-import {useContext} from "react";
+import "../css/eventList.css";
 
 export default function EventList(props) {
-
-    return (
+  return (
     <section className="main-event-container">
       <EventCards />
     </section>
   );
 
   function EventCards() {
-
     return props.unique.map((show) => (
       <EventCard key={show.name} details={show} />
     ));
@@ -29,7 +25,9 @@ export default function EventList(props) {
           </Link>
         </div>
         <div>
-          <Link to={"/ArtistEventsPage"}>
+          <h2 className="show-date">{details.date}</h2>
+          <Link to={"eventselection"} state={{ data: details.name }}>
+
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
         </div>

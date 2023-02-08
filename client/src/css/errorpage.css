@@ -44,6 +44,7 @@
     position: relative;
     z-index: 9;
     line-height: 100%;
+    color: var(--black);
 }
 
 .circles p small {

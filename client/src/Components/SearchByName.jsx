@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import showAPI from "../showAPI.jsx";
+import { useContext, useEffect, useState } from "react";
 import "../css/app.css";
+import globalContext from "../context/GlobalContext.jsx";
 
 export default function (props) {
   const [query, setQuery] = useState(null);
-  const showList = Object.values(props.filteredData);
+  const { showList } = useContext(globalContext);
 
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -12,10 +12,10 @@ export default function (props) {
 
   useEffect(() => {
     if (query === "") {
-      props.setFilteredData(showAPI);
+      props.setFilteredData(showList);
     } else if (query) {
       props.setFilteredData(
-        showAPI.filter((show) => {
+        showList.filter((show) => {
           if (show.name.toLowerCase().includes(query.toLowerCase())) {
             return show;
           }

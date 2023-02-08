@@ -1,16 +1,59 @@
 import "../css/app.css";
 import { NavLink } from "react-router-dom";
+import GlobalContext from "../context/GlobalContext.jsx";
+import {useContext} from "react";
+
 
 export default function (props) {
+  const { auth, logout } = useContext(GlobalContext);
+
   return (
     <nav>
+      {
+        auth.loggedIn ?
       <ul className={props.toggle ? "menu-items show" : "menu-items"}>
         <li>
           <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            onClick={() => props.setToggle(!props.toggle)}
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => props.setToggle(!props.toggle)}
           >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => props.setToggle(!props.toggle)}
+          >
+            My Pages
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => props.setToggle(!props.toggle)}
+          >
+            Profile
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={() => {props.setToggle(!props.toggle); logout ()} }
+          >
+            Logout
+          </NavLink>
+        </li>
+      </ul>
+            :
+            <ul className={props.toggle ? "menu-items show" : "menu-items"}>
+              <li>
+                <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}
+                         onClick={() => props.setToggle(!props.toggle)}>
             Home
           </NavLink>
         </li>
@@ -33,6 +76,7 @@ export default function (props) {
           </NavLink>
         </li>
       </ul>
+      }
     </nav>
   );
 };

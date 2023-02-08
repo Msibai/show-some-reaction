@@ -1,0 +1,74 @@
+.booking-card {
+    display: flex;
+    border-top: 3px solid var(--yellow);
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+    color: var(--grayishBlue);
+
+}
+
+.booking-card-content {
+    padding: 1rem;
+}
+
+.booking-card-content h4{
+    padding: 2px;
+    color: var(--black);
+}
+
+.booking-card-content h5 {
+    background-color: var(--yellow);
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+}
+
+.add-to-cart-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-buttons button {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 70%;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.add-to-cart-buttons button:active {
+    background-color: var(--black);
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.add-to-cart-buttons p {
+    width: 50px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

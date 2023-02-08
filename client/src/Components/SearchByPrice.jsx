@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import showAPI from "../showAPI.jsx";
-import"../css/app.css"
+import { useContext, useEffect, useRef, useState } from "react";
+import "../css/app.css";
+import globalContext from "../context/GlobalContext.jsx";
 
 export default function (props) {
   const [price, setPrice] = useState("");
-  const showList = Object.values(props.filteredData);
+  const { showList } = useContext(globalContext);
   const rangeRef = useRef();
 
   const handleChange = (e) => {
@@ -12,7 +12,7 @@ export default function (props) {
   };
 
   const handleReset = () => {
-    props.setFilteredData(showAPI);
+    props.setFilteredData(showList);
     setPrice(null);
     rangeRef.current.value = 0;
   };
@@ -20,7 +20,7 @@ export default function (props) {
   useEffect(() => {
     if (price) {
       props.setFilteredData(
-        showAPI.filter((show) => {
+        showList.filter((show) => {
           if (parseInt(show.price, 10) < parseInt(price, 10)) {
             return show;
           }
