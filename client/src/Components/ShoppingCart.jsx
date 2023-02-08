@@ -12,7 +12,7 @@ export default function ShoppingCart({ isCartOpen }) {
     <div className="shopping-cart">
       {cartQuantity > 0 ? (
         <>
-          <h2>Yor Cart [{cartQuantity} Items]</h2>
+          <h2>Your Cart [{cartQuantity} Item{cartQuantity > 1 ? 's' : ''}]</h2>
           <table>
             <thead>
               <tr>
@@ -51,7 +51,7 @@ export default function ShoppingCart({ isCartOpen }) {
         </>
       ) : (
         <>
-          <h2>Yor Cart is Empty</h2>
+          <h2>Your Cart is Empty</h2>
         </>
       )}
     </div>

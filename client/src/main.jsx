@@ -27,15 +27,19 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="eventlist" element={<EventList />} />
       <Route path=":name" element={<Event />} />
+
       <Route path="eventselection" element={<EventSelectionPage />} />
+
       <Route path="login" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
       <Route path="paymentpage" element={<PaymentPage />} />
       <Route path="forgotpassword" element={<ForgotPasswordForm />} />
       <Route path="cart" element={<ShoppingCart />} />
-    </Route>,
+    </Route>
   ])
 );
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

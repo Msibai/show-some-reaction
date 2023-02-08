@@ -44,8 +44,7 @@ export default function () {
       <div className="information-section">
         <div className="event-information-section">
           <h2 className="heading-general-info">
-            {" "}
-            General Information about the event{" "}
+            General Information about the event
           </h2>
           <p className="event-description"> {event.description} </p>
         </div>

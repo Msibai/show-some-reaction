@@ -25,14 +25,11 @@ export default function EventList(props) {
           </Link>
         </div>
         <div>
-          <h2 className="show-date">{details.date}</h2>
+          <h2 className="show-date">Opening: {details.date}</h2>
           <Link to={"eventselection"} state={{ data: details.name }}>
 
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
-        </div>
-        <div className="info">
-          <span className="card-description">{details.description}</span>
         </div>
       </div>
     );
