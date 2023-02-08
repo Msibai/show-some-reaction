@@ -1,6 +1,5 @@
 import "../css/app.css";
 import {Link} from "react-router-dom";
-import "../css/showcard.css";
 import globalContext from "../context/GlobalContext.jsx";
 import { useContext } from "react";
 import "../css/eventList.css";
