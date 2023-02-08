@@ -14,89 +14,126 @@ import {
 } from "react-share";
 
 export default function () {
-  const [selectedShow, setSelectedShow] = useState();
   const data = useContext(globalContext);
   const showList = data.showList;
+  const [selectedShow, setSelectedShow] = useState();
+  const [selectedVenue, setSelectedVenue] = useState();
   const [isLess, setIsLess] = useState(false);
   const name = useParams().name;
   let shareUrl = "/" + name;
 
   if (typeof window === "object") {
     shareUrl = String(window.location);
-    console.log(shareUrl);
   }
+
+  const getShowInAllLocation = showList.filter((show) => show.name === name);
+  const venueLocations = [
+    ...new Set(getShowInAllLocation.map((show) => show.location)),
+  ];
 
   useEffect(() => {
     setSelectedShow(showList.find((event) => event.name === name));
   }, [showList]);
 
   if (!selectedShow) {
-    return <div>Loading...</div>;
+    return <h2>Loading...</h2>;
   }
 
   return (
-    <div className="full-event-container">
-      <div className="trailer-component">
-        <div className="trailer">
-          <img src={selectedShow.trailer} className="trailer-photo" />
-        </div>
-
-        <div className="trailer-buttons">
-          <Link to={"/eventselection"} state={{ data: selectedShow.name }}>
-            <button className="buy-tickets">Buy Tickets</button>
-          </Link>
-          <div className="share-buttons">
-            <EmailShareButton url={shareUrl} subject="Do you want to join me?">
-              <EmailIcon size={32} />
-            </EmailShareButton>
-            <FacebookShareButton url={shareUrl}>
-              <FacebookIcon size={32} />
-            </FacebookShareButton>
-            <TwitterShareButton url={shareUrl}>
-              <TwitterIcon size={32} />
-            </TwitterShareButton>
-            <WhatsappShareButton url={shareUrl}>
-              <WhatsappIcon size={32} />
-            </WhatsappShareButton>
-          </div>
-        </div>
+    <div className="event-container">
+      <h2>{selectedShow.name}</h2>
+      <img src={selectedShow.trailer} className="trailer-photo" alt="trailer" />
+      <div className="trailer-buttons">
+        <Link to={"/eventselection"} state={{ data: selectedShow.name }}>
+          <button className="buy-tickets">Buy Tickets</button>
+        </Link>
+        <SharingButtons />
       </div>
-
-      <VenueLocationBox />
-
-      <div className="information-section">
-        <div className="event-information-section">
-          <h2 className="heading-general-info">
-            {" "}
-            General Information about the event{" "}
-          </h2>
-          <p className="event-description"> {selectedShow.description} </p>
-        </div>
-        <button
-          className="hide-show-button"
-          type="button"
-          onClick={() => setIsLess(!isLess)}
-        >
-          {" "}
-          {isLess === false ? "More about Artist" : "Hide"}
-        </button>
-        {isLess && (
-          <div className="artist-information-section">
-            <div className="artist-details">
-              <h2 className="artist"> Artist</h2>
-              <img src={selectedShow.artist} className="artist-pic" />
-              <h2 className="artist-name"> {selectedShow.name}</h2>
-            </div>
-
-            <div className="artist-info-section">
-              <h2> About: </h2>
-              <p> {selectedShow.about}</p>
-              <h2> Life: </h2>
-              <p> {selectedShow.life}</p>
-            </div>
-          </div>
-        )}
+      <div className="event-info">
+        <h3>General Information about the event</h3>
+        <p>
+          Quisque neque tellus, maximus quis semper quis, eleifend ut nisl.
+          Praesent venenatis magna odio, a iaculis mi euismod ut. Integer nunc
+          nunc, convallis at massa vel, congue facilisis nulla. Nam sit amet sem
+          lorem. Pellentesque imperdiet magna odio, a ullamcorper libero
+          vehicula bibendum. Etiam vel dolor tristique tellus efficitur
+          condimentum. Sed id hendrerit nunc. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Morbi non dui ac
+          felis auctor posuere non nec nibh. In non justo eu nisi volutpat
+          tempor ac eu nibh. Donec mattis felis nec tincidunt convallis. Mauris
+          vitae tortor quis justo luctus semper. Aliquam non felis aliquam,
+          imperdiet mauris at, egestas justo. Etiam eget diam bibendum, viverra
+          mauris ut, sagittis massa. Praesent ultrices tempus pretium.
+        </p>
       </div>
+      <button
+        className="know-more"
+        type="button"
+        onClick={() => setIsLess(!isLess)}
+      >
+        {isLess === false ? "More about Artist" : "Hide"}
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      {isLess && (
+        <div className="artist-info">
+          <img src={selectedShow.artist} alt="artist" />
+          <h3> About: </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut
+            metus vitae elit imperdiet porttitor. Integer vel felis elit. Cras
+            finibus odio id lobortis fringilla. Duis ac nisl sit amet odio
+            tempor varius. Phasellus sed condimentum nisl. Nulla tincidunt
+            aliquet est a imperdiet. Sed auctor, ex sit amet venenatis molestie,
+            nisi purus dictum metus, quis consequat orci magna ornare tellus.
+            Pellentesque gravida id augue a sodales. Aenean vehicula ornare
+            velit, nec ultricies sapien accumsan sit amet. Curabitur sagittis
+            enim leo, nec scelerisque risus consectetur nec. Pellentesque et leo
+            porttitor, mattis mi non, imperdiet ligula. Aenean iaculis, quam a
+            tincidunt mollis, enim ante ornare enim, non eleifend ante eros sit
+            amet enim. Pellentesque lobortis velit a laoreet tincidunt. Maecenas
+            eget tellus pellentesque, imperdiet lorem ac, tincidunt elit. Fusce
+            rhoncus faucibus molestie. Ut faucibus nunc at ipsum gravida
+            eleifend.
+          </p>
+          <h3> Life: </h3>
+          <p> {selectedShow.life}</p>
+        </div>
+      )}
+      <div className="venue-buttons">
+        <p>You can attend this show in</p>
+        {venueLocations.map((venue, index) => {
+          return (
+            <button key={index} onClick={() => setSelectedVenue(venue)}>
+              {venue}
+            </button>
+          );
+        })}
+      </div>
+      <VenueLocationBox
+        selectedVenue={selectedVenue ? selectedVenue : selectedShow.location}
+      />
     </div>
   );
+
+  function SharingButtons() {
+    return (
+      <div className="share-buttons">
+        <EmailShareButton url={shareUrl} subject="Do you want to join me?">
+          <EmailIcon size={60} />
+        </EmailShareButton>
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={60} />
+        </FacebookShareButton>
+        <TwitterShareButton url={shareUrl}>
+          <TwitterIcon size={60} />
+        </TwitterShareButton>
+        <WhatsappShareButton url={shareUrl}>
+          <WhatsappIcon size={60} />
+        </WhatsappShareButton>
+      </div>
+    );
+  }
 }

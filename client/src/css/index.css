@@ -106,6 +106,8 @@ pre {
     --yellow: #E59500;
     --grey: #E5DADA;
     --black: #02040F;
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
     font-size: calc(15px + 0.390625vw);
 }
 
