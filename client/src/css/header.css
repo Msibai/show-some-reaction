@@ -1,7 +1,7 @@
 header {
     height: 140px;
     background-color: var(--black);
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
+    box-shadow: 2px 2px 6px #232323;
 }
 
 .header-container {
@@ -23,7 +23,6 @@ header {
 .header-logo {
     width: 150px;
     border-radius: 50%;
-
 }
 
 .app-title h1 {
@@ -245,4 +244,11 @@ nav .menu-items {
     border: 1px solid black;
     justify-content: space-around;
     box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 6px #232323;
+}
+
+@media (max-width: 315px) {
+    .header-logo {
+        transform: scale(50%);
+        left: 5px;
+    }
 }

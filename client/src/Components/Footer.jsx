@@ -6,14 +6,12 @@ export default function () {
   return (
     <>
       <footer className="footer">
+        <div>
         <nav>
           <Link to="/">
             <img className="logo-footer" alt="logo" src="src/images/logo.jpg" />
           </Link>
-          <p className="copyright">
-            Copyright &copy; <span className="year">2023</span> by Show some
-            REACTion
-          </p>
+
         </nav>
 
         <nav>
@@ -52,11 +50,12 @@ export default function () {
           </ul>
         </nav>
 
+
         <nav>
           <p className="footer-heading">Account</p>
           <ul className="footer-nav">
             <li>
-              <Link to="signup">Create account</Link>
+              <Link to="signup" className="footer-link">Create account</Link>
             </li>
             <li>
               <Link to="login" className="footer-link">
@@ -65,6 +64,12 @@ export default function () {
             </li>
           </ul>
         </nav>
+        </div>
+
+        <p className="copyright">
+          Copyright &copy; <span className="year">2023</span> by Show some
+          REACTion
+        </p>
       </footer>
     </>
   );

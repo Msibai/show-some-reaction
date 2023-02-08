@@ -14,17 +14,27 @@
 }
 
 .checkout-link {
+    display: block;
     background-color: var(--red);
     color: white;
-    border: none;
     padding: 10px;
     font-size: 16px;
-    height: 35px;
-    width: 35px;
-    box-shadow: 0 2px 4px darkslategray;
+    width: 10rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
     cursor: pointer;
     transition: all 0.2s ease;
     border-radius: 5px;
     text-align: center;
-    margin: 0 10px;
+    margin: 1rem auto;
+}
+
+.checkout-link:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 1s, border 0.5s;
+    cursor: pointer;
+}
+
+.checkout-link:active {
+    transform: translateY(2px) translateX(2px);
 }

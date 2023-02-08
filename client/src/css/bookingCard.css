@@ -7,7 +7,6 @@
     padding: 30px;
     margin: 20px;
     color: var(--grayishBlue);
-
 }
 
 .booking-card-content {
@@ -69,6 +68,21 @@
 .cards-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (max-width: 400px) {
+    .add-to-cart p:last-child {
+        display: none;
+    }
+
+    .add-to-cart {
+        font-size: 13px;
+    }
+
+    .booking-card {
+        padding: 10px;
+        justify-content: center;
+    }
 }
 
 
