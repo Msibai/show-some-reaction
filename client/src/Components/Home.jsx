@@ -28,7 +28,8 @@ export default function () {
                     setFilteredData={setFilteredData}
                 />
             </div>
-            <EventList unique={unique} />
+            <EventList unique={unique} setFilteredData={setFilteredData} />
+
         </div>
     );
 }

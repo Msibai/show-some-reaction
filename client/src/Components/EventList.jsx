@@ -1,16 +1,17 @@
 import "../css/app.css";
-import { Link } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import "../css/showcard.css";
 import globalContext from "../context/GlobalContext.jsx";
 import { useContext } from "react";
 
 export default function EventList(props) {
+    const {showList} = useContext(globalContext);
     let len = props.unique.length;
   return (
     <section className="main-event-container">
         {
             (len === 0 ) ?
-                <div className="no-data-found"> No event for your selected criteria available. <span> <button className="view-all"> All shows  </button> </span>  </div>
+                <div className="no-data-found"> No event for your selected criteria available. <button onClick= { ()=> { props.setFilteredData(showList)}} > Go Back  </button> </div>
                 :
 
       <EventCards />
