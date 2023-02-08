@@ -2,6 +2,16 @@ import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import VenueLocationBox from "./VenueLocationBox.jsx";
 import globalContext from "../context/GlobalContext.jsx";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
 
 export default function () {
   const [selectedShow, setSelectedShow] = useState();
@@ -9,6 +19,12 @@ export default function () {
   const showList = data.showList;
   const [isLess, setIsLess] = useState(false);
   const name = useParams().name;
+  let shareUrl = "/" + name;
+
+  if (typeof window === "object") {
+    shareUrl = String(window.location);
+    console.log(shareUrl);
+  }
 
   useEffect(() => {
     setSelectedShow(showList.find((event) => event.name === name));
@@ -29,7 +45,20 @@ export default function () {
           <Link to={"/eventselection"} state={{ data: selectedShow.name }}>
             <button className="buy-tickets">Buy Tickets</button>
           </Link>
-          <button className="share-button">Share event</button>
+          <div className="share-buttons">
+            <EmailShareButton url={shareUrl} subject="Do you want to join me?">
+              <EmailIcon size={32} />
+            </EmailShareButton>
+            <FacebookShareButton url={shareUrl}>
+              <FacebookIcon size={32} />
+            </FacebookShareButton>
+            <TwitterShareButton url={shareUrl}>
+              <TwitterIcon size={32} />
+            </TwitterShareButton>
+            <WhatsappShareButton url={shareUrl}>
+              <WhatsappIcon size={32} />
+            </WhatsappShareButton>
+          </div>
         </div>
       </div>
 
