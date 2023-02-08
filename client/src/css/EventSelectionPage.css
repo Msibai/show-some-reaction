@@ -12,3 +12,19 @@
     font-size: 1.5rem;
     margin: 2rem;
 }
+
+.checkout-link {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 10px;
+}

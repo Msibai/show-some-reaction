@@ -21,20 +21,25 @@ import BookingCard from "./Components/BookingCard.jsx";
 import EventSelectionPage from "./Components/EventSelectionPage.jsx";
 
 const router = createBrowserRouter(
+
   createRoutesFromElements([
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route index element={<Home />} />
       <Route path="eventlist" element={<EventList />} />
       <Route path=":name" element={<Event />} />
+
       <Route path="eventselection" element={<EventSelectionPage />} />
+
       <Route path="login" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
       <Route path="paymentpage" element={<PaymentPage />} />
       <Route path="forgotpassword" element={<ForgotPasswordForm />} />
       <Route path="cart" element={<ShoppingCart />} />
-    </Route>,
+    </Route>
   ])
 );
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

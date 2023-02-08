@@ -2,7 +2,8 @@ import BookingCard from "./BookingCard.jsx";
 import "../css/EventSelectionPage.css";
 import { useContext } from "react";
 import globalContext from "../context/GlobalContext.jsx";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import ShoppingCart from "./ShoppingCart.jsx";
 
 export default function EventSelectionPage() {
   const { showList } = useContext(globalContext);
@@ -31,6 +32,9 @@ export default function EventSelectionPage() {
           );
         })}
       </div>
+
+      <Link to="/cart" className="checkout-link">Continue to checkout</Link>
+
     </div>
   );
 
