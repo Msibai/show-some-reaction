@@ -1,0 +1,137 @@
+
+.filter {
+    background: white;
+    /*box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);*/
+    border-radius: 100vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    border: 2px solid var(--yellow);
+    margin: 2rem 10px;
+}
+
+.filter .search {
+    display: none;
+}
+
+.filter button {
+    padding: 7px;
+    margin: 0 0 5px 5px;
+    background-color: var(--red);
+    color: white;
+    border-radius: 100vw;
+}
+
+.filter div {
+    border-radius: inherit;
+    padding: 0.8rem 1.5rem;
+    transition: background 250ms ease;
+}
+
+.filter div:hover {
+    background: hsl(0 0% 94%);
+}
+
+input[type="search"] {
+    background-color: hsl(0 0% 94%);
+    border: none;
+    width: 160px;
+    padding: 5px;
+    border-radius: 100vw;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 12px;
+}
+
+.search-by-price .inner-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.inner-container output {
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+    background-color: hsl(0 0% 94%);
+    border-radius: 30%;
+    padding: 7px;
+}
+
+.search-by-price input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    /*width: 15rem;*/
+    background-color: var(--red);
+    height: 5px;
+}
+
+.search-by-price input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--black);
+}
+
+.search-by-date .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.search-by-date .datepicker {
+    padding: 0;
+}
+
+.datepicker label {
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.search-by-date .inner-container {
+    padding: 0;
+    margin: 0;
+}
+
+.bar > div {
+    position: relative;
+}
+
+.filter > div::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 55%;
+    background: hsl(0 0% 90%);
+}
+
+.filter > div:nth-of-type(1)::before {
+    background: transparent;
+}
+
+.filter > div:hover::before {
+    background: transparent;
+}
+
+@media (max-width: 940px) {
+    .filter {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .filter {
+        border-radius: 0;
+        justify-content: left;
+    }
+}

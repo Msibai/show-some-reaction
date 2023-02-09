@@ -32,26 +32,22 @@ export default function (props) {
   return (
     <>
       <div className="search-by-price">
-        <div className="container">
-          <p className="budget">What is your budget?</p>
-          <div className="inner-container">
-            <output htmlFor="range" className="output">
-              {price}
-            </output>
-            <div className="input-container">
-              <input
-                ref={rangeRef}
-                type="range"
-                name="range"
-                id="range"
-                min="0"
-                max="1000"
-                step="50"
-                onInput={handleChange}
-              />
-            </div>
-            <button onClick={handleReset}>Reset</button>
-          </div>
+        <p className="budget">What is your budget?</p>
+        <div className="inner-container">
+          <output htmlFor="range" className="output">
+            {price}
+          </output>
+          <input
+            ref={rangeRef}
+            type="range"
+            name="range"
+            id="range"
+            min="0"
+            max="1000"
+            step="50"
+            onInput={handleChange}
+          />
+          <button onClick={handleReset}>Reset</button>
         </div>
       </div>
     </>

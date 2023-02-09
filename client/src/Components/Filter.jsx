@@ -1,6 +1,9 @@
 import SearchByName from "./SearchByName.jsx";
 import SearchByPrice from "./SearchByPrice.jsx";
 import SearchByDate from "./SearchByDate.jsx";
+import "../css/filter.css";
+import { FaSearch } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Filter(props) {
   return (
