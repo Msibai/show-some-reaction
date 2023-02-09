@@ -84,8 +84,10 @@ nav:last-child{
         text-align: center;
     }
 
-    nav:first-child, nav:last-child {
+    footer nav:first-child, footer nav:last-child {
         display: none;
     }
 
 }
+
+

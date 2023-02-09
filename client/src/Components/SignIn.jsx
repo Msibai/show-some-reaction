@@ -1,50 +1,40 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useRef} from "react";
 import "../css/signinpage.css";
-import {Link, useNavigate} from "react-router-dom";
-import { Icon } from "react-icons-kit";
-import { eyeDisabled } from "react-icons-kit/ionicons/eyeDisabled";
-import { eye } from "react-icons-kit/ionicons/eye";
+import {Link, Navigate} from "react-router-dom";
 import GlobalContext from "../context/GlobalContext.jsx";
 
 
 
 
 export default function() {
-  const { submitLogin } = useContext(GlobalContext);
+  const { submitLogin, auth } = useContext(GlobalContext);
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [type, setType] = useState("password");
-  const [icon, setIcon] = useState(eyeDisabled);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    submitLogin(email, pass);
-
-  };
-
-  const handleToggle = () => {
-    if (type === "password") {
-      setIcon(eye);
-      setType("text");
-    } else {
-      setIcon(eyeDisabled);
-      setType("password");
-    }
-  };
-
+  if (auth.loggedIn) {
+    return <Navigate to="/" />;
+  }
   return (
     <>
       <div className="login-form-container">
-        <img src="src/images/user3.jpg" className="login-logo" />
-        <h2 className="welcome-message"> Glad to see you again!</h2>
-        <form onSubmit={handleSubmit} className="login-form">
+
+      <h2>Glad to see you again!</h2>
+
+        <form
+            method="post"
+            onSubmit={(event) => {
+              event.preventDefault();
+              submitLogin(emailRef.current.value, passwordRef.current.value);
+            }}
+        >
+
+          <h3>Login Here</h3>
           <label className="email-label" htmlFor="email">
-            Username
+            Email
           </label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+          <input ref={emailRef}
+
+
             type="email"
             placeholder="your@email.com"
             id="email"
@@ -54,23 +44,21 @@ export default function() {
           <label className="pass-label" htmlFor="password">
             Password
           </label>
-          <div className="pass-eye-div">
-            <input
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
-              type={type}
-              placeholder="*************"
+
+            <input ref={passwordRef}
+
+                   placeholder="*************"
+
+
               id="password"
               name="password"
               className="password"
             />
+          <input type={"submit"} name={"submit"} className="login-button" value={"Sign in"} />
 
-            <span onClick={handleToggle}>
-              <Icon icon={icon} size={20} />
-            </span>
-          </div>
-          <Link to={"/forgotpassword"} className="forgot-password-text">Forgot your password?</Link>
-          <button className="login-button">Log In</button>
+
+          <Link to={"/forgotpassword"} className="forgot-password-text">Forgot your password?</Link><br />
+
           <Link to={"/signup"} className="text-for-signup">
 
             Don't have an account? Sign up here

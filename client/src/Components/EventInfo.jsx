@@ -106,7 +106,7 @@ export default function () {
         <p>You can attend this show in</p>
         {venueLocations.map((venue, index) => {
           return (
-            <button key={index} onClick={() => setSelectedVenue(venue)}>
+            <button key={index} className={venue} onClick={() => setSelectedVenue(venue)}>
               {venue}
             </button>
           );

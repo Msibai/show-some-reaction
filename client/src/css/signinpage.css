@@ -1,91 +1,55 @@
 .login-form-container{
+
+    margin:auto;
+}
+
+.login-form-container form{
+    width: 400px;
+    background-color:var(--grey);
+    font-family:var(--heading-font);
+
+    margin: 5rem auto;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.login-form-container form *{
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.login-form-container form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
     text-align: center;
-    background-color:#E5DADA;
-    height: 50rem;
+
+}
+
+.login-form-container form label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family:var(--heading-font);
+}
+.login-form-container form input{
+    display: block;
+    height: 50px;
     width: 100%;
+    background-color:var(--veryLightGray);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.login-form-container form::placeholder{
+    color:var(--black);
+
 }
 
-.login-form{
-    margin-left: 40%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    margin-top:1rem;
-}
 
-.login-logo{
-    margin-top: 2rem;
-    width:90px;
-    border-radius: 50%;
-}
 
-.login-button{
-    background-color: #840032 ;
-    color: white;
-    font-family: lato;
-    margin-top: 1.5rem;
-}
-
-.login-button:hover{
-    background-color: rgba(10, 10, 10, 0.57);
-    color: white;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.email-label{
-    font-family: lato;
-    text-align: start;
-    font-size: 18px;
-    font-weight: bolder;
-    width:300px;
-}
-
-.pass-label{
-    font-family: lato;
-    text-align: start;
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-.email{
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #840032;
-    width:300px;
-    background: white;
-}
-
-.password{
-    width:21rem;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-    background: transparent;
-    background: white;
-}
-
-.pass-eye-div{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #840032;
-    height: 2.9rem;
-    overflow: hidden;
-    background: white;
-}
-
-.welcome-message{
-    font-family: playfair;
-    font-size: 36px;
-}
-
-.text-for-signup{
-    text-align: center;
-    margin-top:2rem;
-    color: #0a0a0a;
-    font-family: lato;
-    font-size: 20px;
-}
-.pass-eye-div span{
-    cursor: pointer;
-}
