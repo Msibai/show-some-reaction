@@ -47,13 +47,13 @@ export default function() {
 
             <input ref={passwordRef}
 
-                   placeholder="*************"
-
-
+              placeholder="*************"
+              type="password"
               id="password"
               name="password"
               className="password"
             />
+
           <input type={"submit"} name={"submit"} className="login-button" value={"Sign in"} />
 
 

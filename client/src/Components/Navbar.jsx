@@ -21,33 +21,9 @@ export default function (props) {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => props.setToggle(!props.toggle)}
-          >
-            My Pages
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => props.setToggle(!props.toggle)}
-          >
-            Profile
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => {props.setToggle(!props.toggle); logout ()} }
-          >
-            Logout
-          </NavLink>
-        </li>
+
+        <li className="logout" onClick={logout}><a href="">Logout</a></li>
+
       </ul>
             :
             <ul className={props.toggle ? "menu-items show" : "menu-items"}>
