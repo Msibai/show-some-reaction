@@ -22,212 +22,7 @@ h2 {
     font-weight: 900;
 }
 
-.home-main-wrapper {
-    display: flex;
-}
-
-/********** search-by-name **********/
-
-.drop-down-search {
-    display: none;
-    padding: 1px;
-    margin: 20px;
-    border-radius: 10px;
-    background: linear-gradient(-67deg, rgba(220, 220, 220, 0.4), rgb(215, 215, 215));
-    overflow: hidden;
-    width: 380px;
-}
-
-.drop-down-search:hover {
-    background-color: rgba(10, 10, 10, 0.57);
-    color: white;
-    transition: background-color 1s, border 0.5s;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-.search-wrapper {
-    display: block;
-}
-
-.search-by-name {
-    padding: 1px;
-    margin: 20px;
-    border-radius: 10px;
-    background: linear-gradient(-67deg, rgba(220, 220, 220, 0.4), rgb(215, 215, 215));
-    overflow: hidden;
-    width: 380px;
-}
-
-.search-by-name .container {
-    padding: 16px 16px;
-    background-color: rgba(54, 51, 51, 0);
-    border-radius: 10px;
-}
-
-label, .budget, .date {
-    display: block;
-    color: rgba(173, 173, 173, 0.6);
-    margin-bottom: 12px;
-    background: linear-gradient(45deg, rgba(63, 63, 63, 0.87), #0a0a0a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.inner-container {
-    display: flex;
-}
-
-.icon {
-    min-width: 46px;
-    min-height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-right: 12px;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-}
-
-.icon svg {
-    transform: translate(-1px, -1px);
-}
-
-.input-container {
-    width: 100%;
-    --top-shadow: inset 1px 1px 3px #a4a4a4, inset 2px 2px 6px rgb(75, 68, 68);
-    --bottom-shadow: inset -2px -2px 4px rgba(255, 255, 255, .7);
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.input-container:before,
-.input-container:after {
-    left: 0;
-    top: 0;
-    display: block;
-    content: "";
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.input-container:before {
-    box-shadow: var(--bottom-shadow);
-}
-
-.input-container:after {
-    box-shadow: var(--top-shadow);
-}
-
-.search-by-name input, .search-by-date input, .search-by-price input {
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 16px 32px;
-    border: none;
-    display: block;
-    font-weight: 600;
-    color: rgba(54, 51, 51, 0.35);
-    -webkit-appearance: none;
-    transition: all 240ms ease-out;
-    width: 100%;
-}
-
-input::placeholder {
-    color: #bbbbbb;
-}
-
-input:focus {
-    outline: none;
-    color: #4b4444;
-    background-color: #eff5fa;
-}
-
-/********** search-by-price **********/
-.search-by-price {
-    padding: 1px;
-    margin: 20px;
-    border-radius: 10px;
-    background: linear-gradient(-67deg, rgba(220, 220, 220, 0.4), rgb(215, 215, 215));
-    overflow: hidden;
-    width: 380px;
-}
-
-.search-by-price .container {
-    padding: 16px 16px;
-    background-color: rgba(54, 51, 51, 0);
-    border-radius: 10px;
-}
-
-.output {
-    text-align: center;
-    line-height: 46px;
-    min-width: 46px;
-    min-height: 46px;
-    border-radius: 10px;
-    margin-right: 12px;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-}
-
-.search-by-price input {
-    width: 65%;
-}
-
-.search-by-price button {
-    border: 1px solid grey;
-    color: #d72424;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-}
-
-.search-by-price button:hover {
-    background-color: #838383;
-    color: white;
-    transition: 1s, border 0.5s;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-/********** search-by-date **********/
-
-.search-by-date {
-    padding: 1px;
-    margin: 20px;
-    border-radius: 10px;
-    background: linear-gradient(-67deg, rgba(220, 220, 220, 0.4), rgb(215, 215, 215));
-    overflow: hidden;
-    width: 380px;
-}
-
-.search-by-date .container {
-    padding: 16px 16px;
-    background-color: rgba(196, 24, 24, 0);
-    border-radius: 10px;
-}
-
-.search-by-date button {
-    width: 120px;
-    margin: 15px 5px;
-    font-size: small;
-    border: 1px solid grey;
-    color: #d72424;
-    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 1px 1px 2px #232323;
-}
-
-.search-by-date button:hover {
-    background-color: #838383;
-    color: white;
-    transition: 1s, border 0.5s;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-.datepicker {
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.show-wrapper {
+.dropdown {
     display: none;
 }
 
@@ -251,22 +46,23 @@ input:focus {
         width: 17%;
     }
 
-    .home-main-wrapper {
-        flex-direction: column;
-    }
-
-
-    .drop-down-search {
-        display: flex;
-        align-self: center;
-    }
-
-    .search-wrapper {
+    .search-bar {
         display: none;
     }
 
-    .show-wrapper {
+    .dropdown {
         display: block;
+    }
+
+    .search {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 100vw;
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+        border: 2px solid var(--yellow)
     }
 
 }

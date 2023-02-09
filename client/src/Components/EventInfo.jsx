@@ -122,16 +122,16 @@ export default function () {
     return (
       <div className="share-buttons">
         <EmailShareButton url={shareUrl} subject="Do you want to join me?">
-          <EmailIcon size={30} round/>
+          <EmailIcon size={30} round />
         </EmailShareButton>
         <FacebookShareButton url={shareUrl}>
-          <FacebookIcon size={30} round/>
+          <FacebookIcon size={30} round />
         </FacebookShareButton>
         <TwitterShareButton url={shareUrl}>
-          <TwitterIcon size={30} round/>
+          <TwitterIcon size={30} round />
         </TwitterShareButton>
         <WhatsappShareButton url={shareUrl}>
-          <WhatsappIcon size={30} round/>
+          <WhatsappIcon size={30} round />
         </WhatsappShareButton>
       </div>
     );
