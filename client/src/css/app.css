@@ -27,20 +27,13 @@ h2 {
 }
 
 @media (max-width: 700px) {
-    .navLinks {
-        flex-direction: column;
-    }
+
 
     .pageTitle {
         font-size: 7vw;
     }
 
-    .navLink {
-        font-family: "Arial", sans-serif;
-        color: white;
-        padding: 1px;
-        font-size: smaller;
-    }
+
 
     .logo {
         width: 17%;

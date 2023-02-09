@@ -121,6 +121,10 @@ input[type="text"]:focus {
     background: transparent;
 }
 
+.filter p{
+    font-weight:900;
+}
+
 @media (max-width: 940px) {
     .filter {
         flex-wrap: wrap;

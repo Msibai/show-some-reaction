@@ -1,5 +1,6 @@
-.register-btn {
-    display: flex; /*GOES IN SIGNUP*/
+/*
+ .register-btn {
+
     background-color: #840032;
     color: white;
     margin: 2rem auto;
@@ -46,4 +47,75 @@
 
 .full-name{
     padding-top:2rem;
+}
+
+*/
+
+.register-container{
+
+    margin:auto;
+}
+
+.register-container form{
+    width: 400px;
+    background-color:var(--grey);
+    font-family:var(--heading-font);
+
+    margin: 5rem auto;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.register-container form *{
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.register-container form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+
+}
+
+.register-container form label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family:var(--heading-font);
+}
+.register-container form input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color:var(--veryLightGray);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.register-container form::placeholder{
+    color:var(--black);
+
+}
+
+.register-container .register-btn, .login-form-container .login-button, .forgot-password-container .forgot-password-button{
+    background-color: var(--red);
+    color: white;
+    width:5rem;
+    height:2rem;
+    text-align:center;
+    text-transform:uppercase;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    cursor:pointer;
+    margin:2rem auto;
+    font-family:var(--text-font);
+    font-weight:500;
+
 }

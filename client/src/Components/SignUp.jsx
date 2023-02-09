@@ -18,13 +18,15 @@ export default function ()  {
 
   return (
 
-      <div className={"signup-page-container"}>
+
 
         <div className="register-container">
 
-          <div>
+          <h2>Don't have an account?</h2>
+
+
             <form action="javascript:void(0)" className="register-form" onSubmit={() => register(emailRef.current.value, passwordRef.current.value, nameRef.current.value)}>
-              <h1>Sign up</h1>
+              <h3>Sign up</h3>
               <label htmlFor="name">Full name:</label>
               <input className="input-box"
                      ref={nameRef}
@@ -59,8 +61,8 @@ export default function ()  {
 
               <input type={"submit"} name={'submit'} className="register-btn" value={'Register'}/>
             </form>
-          </div>
-        </div>
+
+
       </div>
   );
 };
