@@ -20,7 +20,7 @@ export default function (props) {
       {searchFilterIsVisible && (
         <Filter
           filteredData={props.filteredData}
-          setFilteredData={props.filteredData}
+          setFilteredData={props.setFilteredData}
         />
       )}
     </>
