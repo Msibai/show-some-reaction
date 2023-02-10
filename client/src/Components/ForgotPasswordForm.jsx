@@ -8,7 +8,7 @@ export default function () {
 
 
             <h2 className={"forgot-password-title"}>Forgot your password?</h2>
-            <p className={"forgot-password-intro"}> That's not a problem, we'll send a new one to your email.</p>
+            <p className={"forgot-password-intro"}> That's not a problem, we'll send you a new one</p>
             <form>
                 <h3>Enter your email</h3>
                 <label className={"email-label-forgot-password"} htmlFor={"email"} />
