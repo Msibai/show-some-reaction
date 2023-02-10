@@ -12,39 +12,43 @@ export default function ShoppingCart({ isCartOpen }) {
     <div className="shopping-cart">
       {cartQuantity > 0 ? (
         <>
-          <h2>Your Cart [{cartQuantity} Item{cartQuantity > 1 ? 's' : ''}]</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cartItems.map((item) => (
-                <tr key={item.selectedSection + item.id}>
-                  <CartItem {...item} />
+          <h2>
+            Your Cart [{cartQuantity} Item{cartQuantity > 1 ? "s" : ""}]
+          </h2>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
                 </tr>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr>
-                <td id="total" colSpan="3">
-                  Total Amount
-                </td>
-                <td>
-                  {formatCurrency(
-                    cartItems.reduce((total, cartItem) => {
-                      const item = showList.find((i) => i.id === cartItem.id);
-                      return total + (item?.price || 0) * cartItem.quantity;
-                    }, 0)
-                  )}
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+              </thead>
+              <tbody>
+                {cartItems.map((item) => (
+                  <tr key={item.selectedSection + item.id}>
+                    <CartItem {...item} />
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td id="total" colSpan="3">
+                    Total Amount
+                  </td>
+                  <td>
+                    {formatCurrency(
+                      cartItems.reduce((total, cartItem) => {
+                        const item = showList.find((i) => i.id === cartItem.id);
+                        return total + (item?.price || 0) * cartItem.quantity;
+                      }, 0)
+                    )}
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
           <div>
             <button className="checkout-button">Checkout</button>
           </div>

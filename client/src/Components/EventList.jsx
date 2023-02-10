@@ -1,23 +1,30 @@
-import "../css/app.css";
-import {Link} from "react-router-dom";
+import "../css/home.css";
+import { Link } from "react-router-dom";
 import globalContext from "../context/GlobalContext.jsx";
 import { useContext } from "react";
 import "../css/eventList.css";
 
 export default function EventList(props) {
-    const {showList} = useContext(globalContext);
-    let len = props.unique.length;
+  const { showList } = useContext(globalContext);
+  let len = props.unique.length;
   return (
     <section className="main-event-container">
-        {
-            (len === 0 ) ?
-                <div className="no-data-found"> <p>No event for your selected criteria available.</p> <button onClick= { ()=> { props.setFilteredData(showList)}}> All shows </button> </div>
-                :
-
-      <EventCards />
-
-
-        }
+      {len === 0 ? (
+        <div className="no-data-found">
+          {" "}
+          <p>No event for your selected criteria available.</p>{" "}
+          <button
+            onClick={() => {
+              props.setFilteredData(showList);
+            }}
+          >
+            {" "}
+            All shows{" "}
+          </button>{" "}
+        </div>
+      ) : (
+        <EventCards />
+      )}
     </section>
   );
 
@@ -36,11 +43,10 @@ export default function EventList(props) {
             <img src={details.image} alt="event image" className="card-image" />
           </Link>
         </div>
-          <p>Opening: {details.date}</p>
-          <Link to={"eventselection"} state={{ data: details.name }}>
-
-            <button className="buy-tickets">Buy Tickets</button>
-          </Link>
+        <p>Opening: {details.date}</p>
+        <Link to={"eventselection"} state={{ data: details.name }}>
+          <button className="buy-tickets">Buy Tickets</button>
+        </Link>
       </div>
     );
   }

@@ -134,6 +134,12 @@
     scale: 110%;
 }
 
+.venue-buttons button.active {
+    scale: 110%;
+    color: white;
+    background-color: var(--grayishBlue);
+}
+
 
 iframe {
     height: 450px;

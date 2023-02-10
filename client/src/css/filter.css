@@ -1,7 +1,6 @@
 
 .filter {
     background: white;
-    /*box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);*/
     border-radius: 100vw;
     display: flex;
     justify-content: space-between;
@@ -20,6 +19,7 @@
     background-color: var(--red);
     color: white;
     border-radius: 100vw;
+    cursor: pointer;
 }
 
 .filter div {
@@ -68,8 +68,7 @@ input[type="text"]:focus {
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
-    /*width: 15rem;*/
-    background-color: var(--red);
+    background-color: var(--grayishBlue);
     height: 5px;
 }
 

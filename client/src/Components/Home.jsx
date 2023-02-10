@@ -1,4 +1,4 @@
-import "../css/app.css";
+import "../css/home.css";
 import { useContext, useEffect, useState } from "react";
 import Filter from "./Filter.jsx";
 import DropDownSearch from "./DropDownSearch.jsx";

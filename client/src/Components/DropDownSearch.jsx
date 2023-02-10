@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Filter from "./Filter.jsx";
-import "../css/app.css";
+import "../css/home.css";
 import { FaSearch } from "react-icons/fa";
 
 export default function (props) {

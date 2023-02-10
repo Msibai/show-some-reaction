@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.shopping-cart > div {
+    overflow-x:auto;
+}
+
 .shopping-cart h2 {
     font-size: 2rem;
     text-align: center;

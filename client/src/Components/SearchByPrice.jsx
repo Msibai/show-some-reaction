@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import "../css/app.css";
+import "../css/home.css";
 import globalContext from "../context/GlobalContext.jsx";
 
 export default function (props) {
