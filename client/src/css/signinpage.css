@@ -51,5 +51,41 @@
 
 }
 
+.forgot-password-text:hover{
+    cursor:pointer;
+    animation-name:hoverAnimation;
+    animation-duration:0.2s;
+    animation-fill-mode:forwards;
+}
+
+.text-for-signup:hover{
+    cursor:pointer;
+    animation-name:hoverAnimation;
+    animation-duration:0.2s;
+    animation-fill-mode:forwards;
+}
 
 
+@keyframes hoverAnimation {
+    0% {
+        opacity:100%;
+    }
+    100% {
+        opacity:40%;
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        background-color: #840032;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.login-button:hover{
+    animation-name:buttonAnimation;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
